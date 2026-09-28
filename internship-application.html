@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship Program — JUW IPE</title>
+<meta name="description" content="Apply for a JUW IPE internship and gain real-world experience through partner organization placements.">
+<link rel="icon" href="images-juw/img-05.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --iba-navy: #002B49;
+    --iba-maroon: #800000;
+    --iba-gold: #D4AF37;
+    --juw-primary: #0B4F6C;
+    --juw-accent: #C79A3D;
+    --bg-light: #F8F9FA;
+    --card-bg: #FFFFFF;
+    --text-dark: #222222;
+    --text-muted: #555555;
+    --border-color: #E0E0E0;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--iba-navy);
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* ===== Top Bar ===== */
+  .top-bar {
+    background: var(--iba-navy);
+    color: #fff;
+    padding: 8px 0;
+    font-size: 13px;
+    border-bottom: 3px solid var(--iba-gold);
+  }
+  .top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+  .top-links a {
+    color: #fff;
+    margin-left: 18px;
+    transition: color 0.2s;
+  }
+  .top-links a:hover { color: var(--iba-gold); }
+
+  /* ===== Header & Nav ===== */
+  header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .brand-logo {
+    display: flex;
+    align-items: center;
+  }
+  .brand-logo img {
+    display: block;
+    height: 46px;
+    width: auto;
+  }
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    position: relative;
+  }
+  .nav-menu a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--iba-navy);
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-menu a:hover { color: var(--iba-maroon); }
+
+  /* ===== Dropdown Menus ===== */
+  .has-dropdown { position: static; }
+  .caret { font-size: 10px; margin-left: 3px; display: inline-block; transition: transform 0.2s; }
+  .has-dropdown.open .caret { transform: rotate(180deg); }
+
+  .dropdown, .mega-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    z-index: 300;
+  }
+  .dropdown {
+    min-width: 220px;
+    padding: 10px 20px;
+    list-style: none;
+  }
+  .dropdown li a {
+    display: block;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
+    color: var(--iba-navy);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .dropdown li:last-child a { border-bottom: none; }
+  .dropdown li a:hover { color: var(--iba-maroon); }
+
+  .mega-dropdown {
+    left: auto;
+    right: 0;
+    width: 820px;
+    max-width: 90vw;
+    padding: 28px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+  .mega-column h4 {
+    font-size: 13px;
+    color: var(--iba-maroon);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--bg-light);
+  }
+  .mega-column ul { list-style: none; }
+  .mega-column li { margin-bottom: 12px; }
+  .mega-column a {
+    font-size: 12.5px;
+    font-weight: 500;
+    text-transform: none;
+    color: var(--text-dark);
+    line-height: 1.4;
+    display: block;
+  }
+  .mega-column a:hover { color: var(--iba-maroon); }
+  .prog-date {
+    display: block;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  @media (min-width: 769px) {
+    .has-dropdown:hover .dropdown { display: block; }
+    .has-dropdown:hover .mega-dropdown { display: grid; }
+  }
+
+  .btn-apply {
+    background: var(--iba-maroon);
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    transition: background 0.2s;
+  }
+  .btn-apply:hover { background: #600000; }
+
+  /* ===== Hero Banner ===== */
+  .hero-iba {
+    position: relative;
+    color: #fff;
+    padding: 80px 0;
+    overflow: hidden;
+  }
+  .hero-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-slideshow .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.8s ease-in-out;
+  }
+  .hero-slideshow .slide.active { opacity: 1; }
+  .hero-iba::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,43,73,0.85), rgba(0,43,73,0.85));
+    z-index: 1;
+  }
+  .hero-iba .container { position: relative; z-index: 2; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .hero-iba h1 {
+    color: #fff;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .hero-iba h1 span { color: var(--iba-gold); }
+  .hero-iba p {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 30px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+  }
+  .stat-item b {
+    font-size: 28px;
+    color: var(--iba-gold);
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .stat-item span { font-size: 12px; color: #ccc; }
+
+  /* Pathway Sidebar Card */
+  .pathway-card {
+    background: #fff;
+    color: var(--text-dark);
+    padding: 30px;
+    border-radius: 6px;
+    border-top: 5px solid var(--iba-maroon);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .pathway-card h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 10px;
+  }
+  .path-step {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .path-number {
+    width: 36px;
+    height: 36px;
+    background: var(--iba-navy);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .path-info h4 { font-size: 15px; color: var(--iba-navy); }
+  .path-info p { font-size: 13px; color: var(--text-muted); }
+
+  /* ===== Main Content Area ===== */
+  section { padding: 60px 0; }
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .section-title h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+  }
+  .section-title h2::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--iba-maroon);
+    display: block;
+    margin: 10px auto 0;
+  }
+
+  /* Filters & Search */
+  .filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .tabs-group {
+    display: flex;
+    gap: 8px;
+  }
+  .tab-btn {
+    padding: 8px 18px;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--iba-navy);
+    color: #fff;
+    border-color: var(--iba-navy);
+  }
+  .tab-btn:active {
+    transform: scale(0.96);
+  }
+  .search-box input {
+    padding: 9px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    width: 260px;
+    font-size: 14px;
+  }
+
+  /* Course Cards Grid */
+  .numbers-bar {
+    background: linear-gradient(135deg, var(--iba-navy), #013a61);
+    color: #fff;
+    border-radius: 6px;
+    padding: 35px 25px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  .numbers-bar h3 {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+  }
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .number-item b {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: var(--iba-gold);
+    margin-bottom: 6px;
+  }
+  .number-item span {
+    display: block;
+    font-size: 13px;
+    color: #dbe4ea;
+    max-width: 220px;
+    margin: 0 auto 15px;
+    line-height: 1.4;
+  }
+  .number-item svg {
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    opacity: 0.85;
+  }
+
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  .promo-card { grid-column: span 2; }
+  .course-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+  }
+  .card-banner {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  .card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-body h3 { font-size: 16px; line-height: 1.3; }
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 13px;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+  }
+  .card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .card-actions {
+    padding: 12px 20px;
+    background: #fff;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .btn-details, .btn-apply-card, .btn-brochure {
+    padding: 7px 14px;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+  .btn-details {
+    background: var(--iba-navy);
+    color: #fff;
+  }
+  .btn-details:hover { background: #001a33; }
+  .btn-apply-card {
+    background: var(--iba-maroon);
+    color: #fff;
+  }
+  .btn-apply-card:hover { background: #600000; }
+  .btn-brochure {
+    background: transparent;
+    color: var(--iba-navy);
+    border: 1px solid var(--iba-navy);
+  }
+  .btn-brochure:hover { background: var(--iba-navy); color: #fff; }
+
+  /* Promo Card — fills empty grid space, styled consistent with numbers bar */
+  .promo-card {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--iba-navy) 0%, #013a61 60%, var(--iba-maroon) 130%);
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow);
+  }
+  .promo-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,0.18); }
+  .promo-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.045) 0px, rgba(255,255,255,0.045) 2px, transparent 2px, transparent 40px);
+  }
+  .promo-overlay {
+    position: relative;
+    z-index: 1;
+    padding: 35px;
+    color: #fff;
+    max-width: 78%;
+  }
+  .promo-label {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--iba-navy);
+    background: var(--iba-gold);
+    padding: 4px 12px;
+    border-radius: 3px;
+    margin-bottom: 14px;
+  }
+  .promo-overlay h3 {
+    color: #fff;
+    font-size: 21px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .promo-overlay p {
+    font-size: 13.5px;
+    color: #d7e0e7;
+    margin-bottom: 22px;
+    line-height: 1.5;
+  }
+  .promo-btn {
+    display: inline-block;
+    background: var(--iba-gold);
+    color: var(--iba-navy);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .promo-btn:hover { background: #fff; transform: translateX(3px); }
+  .promo-icon {
+    position: absolute;
+    right: -15px;
+    bottom: -15px;
+    width: 150px;
+    height: 150px;
+    color: rgba(255,255,255,0.08);
+    z-index: 0;
+  }
+
+  /* ===== Features Section ===== */
+  .features-section { background: var(--iba-navy); color: #fff; }
+  .features-section h2 { color: #fff; }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .feature-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .feature-box h4 { color: var(--iba-gold); margin-bottom: 10px; font-size: 16px; }
+  .feature-box p { font-size: 13px; color: #ccc; }
+
+  /* ===== Application Section ===== */
+  .apply-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--iba-maroon);
+    padding: 30px;
+  }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+  /* ===== Footer ===== */
+  footer {
+    background: #001A2C;
+    color: #99AAB5;
+    padding: 50px 0 20px;
+    font-size: 13px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  footer h4 { color: #fff; font-size: 15px; margin-bottom: 15px; }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 8px; }
+  footer ul a:hover { color: #fff; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  /* ===== Hamburger Menu ===== */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 200;
+  }
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--iba-navy);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  .mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 149;
+  }
+  .mobile-overlay.active {
+    display: block;
+  }
+
+  /* ===== Simple Page Banner ===== */
+  .program-banner-simple {
+    background: linear-gradient(135deg, var(--iba-navy), #013a61);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  .program-banner-simple h1 { color: #fff; font-size: 32px; margin-bottom: 12px; }
+  .program-banner-simple p { color: #d7e0e7; font-size: 15px; max-width: 600px; margin: 0 auto; }
+
+  /* ===== Internship Form Section ===== */
+  .internship-form-section { padding: 60px 0 80px; }
+  .form-placeholder-box {
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 380px;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .placeholder-message {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 40px;
+  }
+  .placeholder-message svg {
+    width: 50px;
+    height: 50px;
+    color: var(--iba-navy);
+    opacity: 0.5;
+    margin-bottom: 15px;
+  }
+  .placeholder-message h3 { font-size: 18px; margin-bottom: 8px; color: var(--iba-navy); }
+  .placeholder-message p { font-size: 13.5px; }
+
+  /* Responsive — Tablet */
+  @media (max-width: 1024px) {
+    .hero-iba h1 { font-size: 34px; }
+    .hero-stats { gap: 20px; }
+    .stat-item b { font-size: 24px; }
+    .course-grid { grid-template-columns: repeat(2, 1fr); }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Responsive — Mobile */
+  @media (max-width: 768px) {
+    .card-banner { height: 160px; }
+    .top-bar .container {
+      flex-direction: column;
+      text-align: center;
+      gap: 6px;
+      padding: 0 10px;
+    }
+    .top-bar { font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .top-links {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .top-links a { margin-left: 0; }
+
+    .hamburger { display: flex; }
+
+    .nav-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 280px;
+      height: 100vh;
+      background: #fff;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 80px 30px 30px;
+      gap: 0;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+      z-index: 150;
+      transition: right 0.3s ease;
+      overflow-y: auto;
+    }
+    .nav-menu.active { display: flex; right: 0; }
+    .nav-menu li { width: 100%; }
+    .nav-menu li a {
+      display: block;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 15px;
+    }
+
+    /* Mobile dropdowns */
+    .has-dropdown > a { display: flex; justify-content: space-between; align-items: center; }
+    .dropdown, .mega-dropdown {
+      display: none;
+      position: static;
+      box-shadow: none;
+      width: 100%;
+      grid-template-columns: 1fr;
+      padding: 0 0 10px 15px;
+      gap: 0;
+    }
+    .has-dropdown.open .dropdown,
+    .has-dropdown.open .mega-dropdown {
+      display: block;
+    }
+    .mega-column { margin-bottom: 15px; }
+    .dropdown li a, .mega-column a { border-bottom: none; padding: 8px 0; }
+
+    .brand-logo img { height: 44px; }
+
+    .hero-iba { padding: 50px 0; overflow: hidden; }
+    .hero-grid { grid-template-columns: 1fr; gap: 25px; }
+    .hero-iba h1 { font-size: 28px; }
+    .hero-iba p { font-size: 14px; }
+    .hero-stats { flex-wrap: wrap; gap: 15px; }
+    .stat-item b { font-size: 22px; }
+    .stat-item span { font-size: 11px; }
+    .pathway-card { max-width: 100%; }
+
+    section { padding: 40px 0; }
+    .section-title h2 { font-size: 22px; }
+
+    .filter-bar { flex-direction: column; align-items: stretch; }
+    .tabs-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-bottom: 5px;
+    }
+    .tab-btn { white-space: nowrap; }
+    .search-box input { width: 100%; }
+
+    .course-grid { grid-template-columns: 1fr; }
+    .promo-card { grid-column: span 1; min-height: 200px; }
+    .promo-overlay { max-width: 100%; padding: 25px; }
+    .promo-icon { width: 100px; height: 100px; }
+    .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 25px 15px; }
+    .numbers-bar h3 { font-size: 17px; }
+    .features-grid { grid-template-columns: 1fr; }
+
+    .form-row { grid-template-columns: 1fr; }
+    .apply-container { padding: 20px; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 25px; }
+
+    .pathway-card { margin-top: 0; }
+  }
+
+  /* Responsive — Small Mobile */
+  @media (max-width: 480px) {
+    .container { padding: 0 15px; }
+    .top-bar { font-size: 11px; padding: 6px 0; }
+    .brand-logo img { height: 40px; }
+    .hero-iba h1 { font-size: 24px; }
+    .hero-iba { padding: 35px 0; }
+    .hero-stats { gap: 10px; }
+    .stat-item b { font-size: 20px; }
+    .card-actions { flex-direction: column; }
+    .card-actions button { width: 100%; text-align: center; }
+    footer { padding: 30px 0 15px; }
+    footer h4 { font-size: 14px; }
+    .footer-bottom p { font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <div class="brand">
+          <a href="index.html" class="brand-logo" aria-label="JUW Institute for Professional Excellence - Home">
+            <img src="images-juw/img-05.png" alt="JUW IPE - Institute for Professional Excellence, Jinnah University for Women">
+          </a>
+        </div>
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li class="has-dropdown">
+            <a href="about-ipe.html">About IPE <span class="caret">&#9662;</span></a>
+            <ul class="dropdown">
+              <li><a href="#">About JUW</a></li>
+              <li><a href="about-ipe.html">About IPE</a></li>
+              <li><a href="#">Director's Message</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Partnerships</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="index.html#courses">Programs <span class="caret">&#9662;</span></a>
+            <div class="mega-dropdown">
+              <div class="mega-column">
+                <h4>Industry Readiness Program</h4>
+                <ul>
+                  <li><a href="course-detail.html?course=industry-quality-assurance">Industry Quality Assurance and Regulatory Laboratory Practices<span class="prog-date">22, 29 August & 5 September 2026</span></a></li>
+                  <li><a href="course-detail.html?course=microbiology-food-safety">Microbiology for a Safer Food Industry — Quality, Safety and Sustainability<span class="prog-date">2, 3 & 5 September 2026</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h4>Certified Short Courses</h4>
+                <ul>
+                  <li><a href="#">Applied Quality Control in Zoological Sciences<span class="prog-date">10, 17 & 19 September 2026</span></a></li>
+                  <li><a href="#">3 Days Lead Implementer Training Program<span class="prog-date">19, 26 September & 3 October 2026</span></a></li>
+                  <li><a href="#">SME LaunchPad Program<span class="prog-date">29, 30 September & 1 October 2026</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h4>Diploma</h4>
+                <ul>
+                  <li><a href="course-detail.html?course=animation-game-design-basic">Animation &amp; Game Design (Basic)<span class="prog-date">6 Months</span></a></li>
+                  <li><a href="course-detail.html?course=animation-game-design-advance">Animation &amp; Game Design (Advance)<span class="prog-date">1 Year</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h4>Workshops</h4>
+                <ul>
+                  <li><a href="#">Block & Screen Print Workshop<span class="prog-date">24 August 2026</span></a></li>
+                  <li><a href="#">Canvas Painting Workshop<span class="prog-date">7 September 2026</span></a></li>
+                  <li><a href="#">Basic Crocheting Workshop<span class="prog-date">8 September 2026</span></a></li>
+                  <li><a href="#">Organic Soap Making Workshop<span class="prog-date">9 September 2026</span></a></li>
+                  <li><a href="#">Facial Serum Making Workshop<span class="prog-date">30 September 2026</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h4>Internships</h4>
+                <ul>
+                  <li><a href="internship-application.html">Apply for Internship</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="index.html#apply">Admissions</a></li>
+          <li><a href="index.html#news-events">News &amp; Events</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- Page Banner -->
+  <section class="program-banner-simple">
+    <div class="container">
+      <h1>Internship Program</h1>
+      <p>Gain real-world experience through JUW IPE's internship placements with partner organizations.</p>
+    </div>
+  </section>
+
+ <!-- Internship Application Form Section -->
+<section class="internship-form-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Apply for an Internship</h2>
+    </div>
+
+    <div class="form-placeholder-box" id="internshipFormContainer" style="padding: 0; background: transparent; border: none;">
+      <!-- Google Form Embed Code -->
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfwxupbs95yUZrS0ATRPbPFQBGBh7yaeVnoGlmnawxbLiZG8Q/viewform?embedded=true" 
+        width="100%" 
+        height="1000" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0"
+        style="border: none; border-radius: 8px;">
+        Loading…
+      </iframe>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Jinnah University for Women</h4>
+          <p>5C, Nazimabad, Karachi, Pakistan.<br>Empowering women through higher education and practical skill development.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about-ipe.html">About IPE</a></li>
+            <li><a href="index.html#courses">Short Courses</a></li>
+            <li><a href="index.html#courses">Executive Diplomas</a></li>
+            <li><a href="index.html#apply">Admissions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Info</h4>
+          <ul>
+            <li>Email: <a href="mailto:info@juw.edu.pk">info@juw.edu.pk</a></li>
+            <li>Phone: +92-21-36620857</li>
+            <li>WhatsApp: Contact via phone</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Office Hours</h4>
+          <p>Monday - Saturday<br>9:00 AM - 5:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Jinnah University for Women. All Rights Reserved. Designed in JUW IPE Layout Structure.</p>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Hamburger Menu
+  var hamburger = document.getElementById('hamburger');
+  var navMenu = document.getElementById('navMenu');
+  var overlay = document.getElementById('mobileOverlay');
+
+  function toggleMenu() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  hamburger.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
+  });
+
+  overlay.addEventListener('click', toggleMenu);
+
+  // Dropdown toggle (mobile: click to open/close; desktop: hover via CSS)
+  document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        var parentLi = link.parentElement;
+        var wasOpen = parentLi.classList.contains('open');
+        document.querySelectorAll('.has-dropdown').forEach(function(li) {
+          li.classList.remove('open');
+        });
+        if (!wasOpen) parentLi.classList.add('open');
+      }
+    });
+  });
+
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      // Don't close the whole mobile menu when just opening a dropdown parent
+      if (link.parentElement.classList.contains('has-dropdown') && window.innerWidth <= 768) return;
+      if (navMenu.classList.contains('active')) toggleMenu();
+    });
+  });
+
+
+
+});
+</script>
+<script>window.JUWBot = { config: { dataUrl: 'knowledge.json', adminPass: 'Mexico2108S' } };</script>
+<script src="engine.js"></script>
+<script src="widget.js"></script>
+</body>
+</html>

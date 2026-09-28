@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JUW Executive Education & Continuing Education — Jinnah University for Women</title>
+<meta name="description" content="JUW Continuing Education — short courses, workshops, certifications and executive programs at Jinnah University for Women, Karachi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>:root {
+    --iba-navy: #002B49;
+    --iba-maroon: #800000;
+    --iba-gold: #D4AF37;
+    --juw-primary: #0B4F6C;
+    --juw-accent: #C79A3D;
+    --bg-light: #F8F9FA;
+    --card-bg: #FFFFFF;
+    --text-dark: #222222;
+    --text-muted: #555555;
+    --border-color: #E0E0E0;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--iba-navy);
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* ===== Header & Nav ===== */
+  header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .brand-logo {
+    display: flex;
+    align-items: center;
+  }
+  .brand-logo img {
+    display: block;
+    height: 54px;
+    width: auto;
+  }
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    position: relative;
+  }
+  .nav-menu a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--iba-navy);
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-menu a:hover { color: var(--iba-maroon); }
+
+  /* ===== Dropdown Menus ===== */
+  .has-dropdown { position: static; }
+  .caret { font-size: 10px; margin-left: 3px; display: inline-block; transition: transform 0.2s; }
+  .has-dropdown.open .caret { transform: rotate(180deg); }
+
+  .dropdown, .mega-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    z-index: 300;
+  }
+  .dropdown {
+    min-width: 220px;
+    padding: 10px 20px;
+    list-style: none;
+  }
+  .dropdown li a {
+    display: block;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
+    color: var(--iba-navy);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .dropdown li:last-child a { border-bottom: none; }
+  .dropdown li a:hover { color: var(--iba-maroon); }
+
+  .mega-dropdown {
+    left: auto;
+    right: 0;
+    width: 820px;
+    max-width: 90vw;
+    padding: 28px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+  .mega-column h4 {
+    font-size: 13px;
+    color: var(--iba-maroon);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--bg-light);
+  }
+  .mega-column ul { list-style: none; }
+  .mega-column li { margin-bottom: 12px; }
+  .mega-column a {
+    font-size: 12.5px;
+    font-weight: 500;
+    text-transform: none;
+    color: var(--text-dark);
+    line-height: 1.4;
+    display: block;
+  }
+  .mega-column a:hover { color: var(--iba-maroon); }
+  .prog-date {
+    display: block;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  @media (min-width: 769px) {
+    .has-dropdown:hover .dropdown { display: block; }
+    .has-dropdown:hover .mega-dropdown { display: grid; }
+  }
+
+  /* ===== Hero ===== */
+
+  .btn-apply {
+    background: var(--iba-maroon);
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    transition: background 0.2s;
+  }
+  .btn-apply:hover { background: #600000; }
+
+  /* ===== Hero Banner ===== */
+  .hero-iba {
+    position: relative;
+    color: #fff;
+    padding: 80px 0 55px;
+    min-height: 520px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .hero-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-slideshow .slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--iba-navy);
+    opacity: 0;
+    transition: opacity 1.8s ease-in-out;
+  }
+  .hero-slideshow .slide.active { opacity: 1; }
+  .hero-iba::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,43,73,0.52), rgba(0,43,73,0.62));
+    z-index: 1;
+  }
+  .hero-iba::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,43,73,0.72) 0%, rgba(0,43,73,0.42) 30%, rgba(0,43,73,0) 62%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero-iba .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 720px;
+    padding: 0 0 0 50px;
+    box-sizing: border-box;
+  }
+  .hero-iba h1 {
+    color: #fff;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  .hero-iba h1 span { color: var(--iba-gold); }
+  .hero-iba p {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  .stat-item b {
+    font-size: 28px;
+    color: var(--iba-gold);
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .stat-item span { font-size: 12px; color: #ccc; }
+
+  /* Pathway Sidebar Card */
+  .pathway-card h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 10px;
+  }
+  .path-info h4 { font-size: 15px; color: var(--iba-navy); }
+  .path-info p { font-size: 13px; color: var(--text-muted); }
+
+  /* ===== Main Content Area ===== */
+  section { padding: 60px 0; }
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .section-title h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+  }
+  .section-title h2::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--iba-maroon);
+    display: block;
+    margin: 10px auto 0;
+  }
+
+  /* Filters & Search */
+  .filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .tabs-group {
+    display: flex;
+    gap: 8px;
+  }
+  .tab-btn {
+    padding: 8px 18px;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .tab-btn.active, .tab-btn:hover {
+    background: var(--iba-navy);
+    color: #fff;
+    border-color: var(--iba-navy);
+  }
+  .tab-btn:active {
+    transform: scale(0.96);
+  }
+  .search-box input {
+    padding: 9px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    width: 260px;
+    font-size: 14px;
+  }
+
+  /* Course Cards Grid */
+  .numbers-bar {
+    background: linear-gradient(135deg, var(--iba-navy), #013a61);
+    color: #fff;
+    border-radius: 6px;
+    padding: 35px 25px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  .numbers-bar h3 {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+  }
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .number-item b {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: var(--iba-gold);
+    margin-bottom: 6px;
+  }
+  .number-item span {
+    display: block;
+    font-size: 13px;
+    color: #dbe4ea;
+    max-width: 220px;
+    margin: 0 auto 15px;
+    line-height: 1.4;
+  }
+  .number-item svg {
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    opacity: 0.85;
+  }
+
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  .filter-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-muted);
+    padding: 30px 15px;
+    background: #fff;
+    border: 1px dashed var(--border-color);
+    border-radius: 6px;
+  }
+  .form-note {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 8px 0 12px;
+  }
+  .promo-card { grid-column: span 1; }
+  .course-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+  }
+  .card-banner {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  .card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-body h3 { font-size: 16px; line-height: 1.3; }
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 13px;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+  }
+  .card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .card-actions {
+    padding: 12px 20px;
+    background: #fff;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .btn-details, .btn-apply-card, .btn-brochure {
+    padding: 7px 14px;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+  .btn-details {
+    background: var(--iba-navy);
+    color: #fff;
+  }
+  .btn-details:hover { background: #001a33; }
+  .btn-apply-card {
+    background: var(--iba-maroon);
+    color: #fff;
+  }
+  .btn-apply-card:hover { background: #600000; }
+  .btn-brochure {
+    background: transparent;
+    color: var(--iba-navy);
+    border: 1px solid var(--iba-navy);
+  }
+  .btn-brochure:hover { background: var(--iba-navy); color: #fff; }
+
+  /* Promo Card — fills empty grid space, styled consistent with numbers bar */
+  .promo-card {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--iba-navy) 0%, #013a61 60%, var(--iba-maroon) 130%);
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow);
+  }
+  .promo-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,0.18); }
+  .promo-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.045) 0px, rgba(255,255,255,0.045) 2px, transparent 2px, transparent 40px);
+  }
+  .promo-overlay {
+    position: relative;
+    z-index: 1;
+    padding: 35px;
+    color: #fff;
+    max-width: 78%;
+  }
+  .promo-label {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--iba-navy);
+    background: var(--iba-gold);
+    padding: 4px 12px;
+    border-radius: 3px;
+    margin-bottom: 14px;
+  }
+  .promo-overlay h3 {
+    color: #fff;
+    font-size: 21px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .promo-overlay p {
+    font-size: 13.5px;
+    color: #d7e0e7;
+    margin-bottom: 22px;
+    line-height: 1.5;
+  }
+  .promo-btn {
+    display: inline-block;
+    background: var(--iba-gold);
+    color: var(--iba-navy);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .promo-btn:hover { background: #fff; transform: translateX(3px); }
+  .promo-icon {
+    position: absolute;
+    right: -15px;
+    bottom: -15px;
+    width: 150px;
+    height: 150px;
+    color: rgba(255,255,255,0.08);
+    z-index: 0;
+  }
+
+  /* ===== Partners & Testimonials (light break between dark sections) ===== */
+  .partners-section { background: #fff; padding: 70px 0; }
+  .testimonials-section { background: var(--bg-light); padding: 70px 0; }
+  .partners-section .section-title,
+  .testimonials-section .section-title { margin-bottom: 12px; }
+  .section-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 640px;
+    margin: 0 auto 40px;
+  }
+
+  /* Partner tiles — text by default; swap in a real logo by replacing the
+     <span class="partner-name"> with <img src="images-juw/partners/FILE.png" alt="Name">
+     (drop logo files into images-juw/partners/) */
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .partner-tile {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px solid #e3e7ec;
+    border-radius: 8px;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease, opacity 0.25s ease;
+  }
+  .partner-tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    filter: grayscale(0);
+    opacity: 1;
+  }
+  .partner-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.35;
+    color: var(--iba-navy);
+  }
+  .partner-tile img {
+    max-height: 60px;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e3e7ec;
+    border-top: 3px solid var(--iba-maroon);
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  }
+  .testimonial-mark {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 0.7;
+    color: var(--iba-maroon);
+    margin-bottom: 14px;
+  }
+  .testimonial-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+  .testimonial-divider {
+    width: 60px;
+    height: 2px;
+    background: #d4a72c;
+    margin-bottom: 14px;
+  }
+  .testimonial-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--iba-navy);
+  }
+  .testimonial-prog {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-top: 3px;
+  }
+
+  /* ===== News & Events ===== */
+  .news-section { background: var(--bg-light); padding: 70px 0; }
+  #news-events { scroll-margin-top: 90px; }
+  .news-section .section-title { margin-bottom: 12px; }
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  .news-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e3e7ec;
+    border-top: 3px solid var(--iba-maroon);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  }
+  /* Image area — placeholder color block. To use a real image, add
+     <img src="images-juw/news/FILE.jpg" alt="..."> inside .news-thumb */
+  .news-thumb {
+    height: 150px;
+    background: linear-gradient(135deg, var(--iba-navy), #013a61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .news-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .news-thumb svg {
+    width: 46px;
+    height: 46px;
+    stroke: rgba(255, 255, 255, 0.55);
+    fill: none;
+    stroke-width: 1.2;
+  }
+  .news-body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+  .news-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .news-cat {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--iba-navy);
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+  .news-cat.is-news { background: var(--iba-maroon); }
+  .news-date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--iba-navy);
+    background: var(--iba-gold);
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+  .news-body h3 {
+    font-size: 17px;
+    line-height: 1.4;
+    color: var(--iba-navy);
+    margin-bottom: 8px;
+  }
+  .news-body p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    flex: 1;
+  }
+  .news-more {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--iba-maroon);
+    align-self: flex-start;
+  }
+  .news-more:hover { text-decoration: underline; color: var(--iba-maroon); }
+
+  /* ===== Features Section ===== */
+  .features-section { background: var(--iba-navy); color: #fff; }
+  .features-section h2 { color: #fff; }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .feature-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .feature-box h4 { color: var(--iba-gold); margin-bottom: 10px; font-size: 16px; }
+  .feature-box p { font-size: 13px; color: #ccc; }
+
+  /* ===== Application Section ===== */
+  .apply-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--iba-maroon);
+    padding: 30px;
+  }
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+  .form-section { margin-bottom: 28px; }
+  .form-section-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .form-section-title::after {
+    content: '';
+    width: 40px;
+    height: 3px;
+    background: var(--iba-maroon);
+    display: block;
+    margin-top: 8px;
+  }
+  .form-group .req { color: #cc0000; }
+  .radio-row { display: flex; gap: 22px; flex-wrap: wrap; }
+  .radio-row label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  .radio-row input[type="radio"] {
+    width: auto;
+    padding: 0;
+    border: none;
+    accent-color: var(--iba-maroon);
+  }
+  .form-group input[type="checkbox"] {
+    width: auto;
+    padding: 0;
+    border: none;
+    accent-color: var(--iba-maroon);
+  }
+  .check-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 20px;
+  }
+  .check-grid label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    min-height: 95px;
+    resize: vertical;
+  }
+
+  /* Multi-step wizard */
+  .step-indicator {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  .step-indicator::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    right: 45px;
+    height: 2px;
+    background: var(--border-color);
+  }
+  .step-item {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    text-align: center;
+  }
+  .step-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .step-item.is-active .step-dot {
+    background: var(--iba-navy);
+    border-color: var(--iba-navy);
+    color: #fff;
+  }
+  .step-item.is-done .step-dot {
+    background: var(--iba-maroon);
+    border-color: var(--iba-maroon);
+    color: #fff;
+  }
+  .step-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: var(--text-muted);
+  }
+  .step-item.is-active .step-label { color: var(--iba-navy); }
+  .step-item.is-done .step-label { color: var(--iba-maroon); }
+
+  .form-step { display: none; }
+  .form-step.is-active { display: block; }
+
+  .step-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 26px;
+  }
+  .btn-step {
+    padding: 11px 26px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-next {
+    margin-left: auto;
+    background: var(--iba-maroon);
+    color: #fff;
+    border: none;
+  }
+  .btn-next:hover { background: #600000; }
+  .btn-prev {
+    background: #fff;
+    color: var(--iba-navy);
+    border: 1px solid var(--iba-navy);
+  }
+  .btn-prev:hover { background: var(--iba-navy); color: #fff; }
+
+  /* Success state */
+  .form-success { text-align: center; padding: 20px 10px 15px; }
+  .success-icon {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #1e8e3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: successPop 0.35s ease;
+  }
+  .success-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: #fff;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  @keyframes successPop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .success-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .success-title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--iba-maroon);
+    display: block;
+    margin: 10px auto 0;
+  }
+  .success-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    max-width: 420px;
+    margin: 14px auto 22px;
+  }
+  .form-success .btn-step { margin: 0 auto; display: block; }
+
+  /* ===== Footer ===== */
+  footer {
+    background: #001A2C;
+    color: #99AAB5;
+    padding: 50px 0 20px;
+    font-size: 13px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  footer h4 { color: #fff; font-size: 15px; margin-bottom: 15px; }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 8px; }
+  footer ul a:hover { color: #fff; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  /* ===== Hamburger Menu ===== */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 200;
+  }
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--iba-navy);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  .mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 149;
+  }
+  .mobile-overlay.active {
+    display: block;
+  }
+
+  /* Responsive — Tablet */
+  @media (max-width: 1024px) {
+    .hero-iba h1 { font-size: 34px; }
+    .hero-iba .hero-content { padding: 0 20px; max-width: 700px; }
+    .brand-logo img { height: 50px; }
+    .stat-item b { font-size: 24px; }
+    .course-grid { grid-template-columns: repeat(2, 1fr); }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .partners-grid { grid-template-columns: repeat(3, 1fr); }
+    .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    .news-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Responsive — Mobile */
+  @media (max-width: 768px) {
+    .card-banner { height: 160px; }
+    .top-links {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hamburger { display: flex; }
+
+    .nav-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 280px;
+      height: 100vh;
+      background: #fff;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 80px 30px 30px;
+      gap: 0;
+      box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+      z-index: 150;
+      transition: right 0.3s ease;
+      overflow-y: auto;
+    }
+    .nav-menu.active { display: flex; right: 0; }
+    .nav-menu li { width: 100%; }
+    .nav-menu li a {
+      display: block;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 15px;
+    }
+
+    /* Mobile dropdowns */
+    .has-dropdown > a { display: flex; justify-content: space-between; align-items: center; }
+    .dropdown, .mega-dropdown {
+      display: none;
+      position: static;
+      box-shadow: none;
+      width: 100%;
+      grid-template-columns: 1fr;
+      padding: 0 0 10px 15px;
+      gap: 0;
+    }
+    .has-dropdown.open .dropdown,
+    .has-dropdown.open .mega-dropdown {
+      display: block;
+    }
+    .mega-column { margin-bottom: 15px; }
+    .dropdown li a, .mega-column a { border-bottom: none; padding: 8px 0; }
+
+    .brand-logo img { height: 48px; }
+
+    .hero-iba { padding: 50px 0 45px; min-height: 420px; overflow: hidden; }
+    .hero-iba h1 { font-size: 28px; }
+    .hero-iba p { font-size: 14px; }
+    .stat-item b { font-size: 22px; }
+    .stat-item span { font-size: 11px; }
+
+    section { padding: 40px 0; }
+    .section-title h2 { font-size: 22px; }
+
+    .filter-bar { flex-direction: column; align-items: stretch; }
+    .tabs-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-bottom: 5px;
+    }
+    .tab-btn { white-space: nowrap; }
+    .search-box input { width: 100%; }
+
+    .course-grid { grid-template-columns: 1fr; }
+    .promo-card { grid-column: span 1; min-height: 200px; }
+    .promo-overlay { max-width: 100%; padding: 25px; }
+    .promo-icon { width: 100px; height: 100px; }
+    .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 25px 15px; }
+    .numbers-bar h3 { font-size: 17px; }
+    .features-grid { grid-template-columns: 1fr; }
+    .partners-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .news-grid { grid-template-columns: 1fr; }
+
+    .form-row { grid-template-columns: 1fr; }
+    .apply-container { padding: 20px; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 25px; }
+  }
+
+  /* Responsive — Small Mobile */
+  @media (max-width: 480px) {
+    .container { padding: 0 15px; }
+    .check-grid { grid-template-columns: 1fr; }
+    .step-label { font-size: 10px; }
+    .btn-step { padding: 10px 18px; }
+    .brand-logo img { height: 44px; }
+    .hero-iba h1 { font-size: 24px; }
+    .hero-iba { padding: 40px 0 35px; min-height: 360px; }
+    .stat-item b { font-size: 20px; }
+    .card-actions { flex-direction: column; }
+    .card-actions button { width: 100%; text-align: center; }
+    footer { padding: 30px 0 15px; }
+    footer h4 { font-size: 14px; }
+    .footer-bottom p { font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="navbar">
+        <div class="brand">
+          <a href="index.html" class="brand-logo" aria-label="JUW Institute for Professional Excellence - Home">
+            <img src="images-juw/img-05.png" alt="JUW IPE - Institute for Professional Excellence, Jinnah University for Women">
+          </a>
+        </div>
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li class="has-dropdown">
+            <a href="about-ipe.html">About US <span class="caret">&#9662;</span></a>
+            <ul class="dropdown">
+              <li><a href="#">About JUW</a></li>
+              <li><a href="about-ipe.html">About IPE</a></li>
+              <li><a href="#">Director's Message</a></li>
+              <li><a href="#">Partnerships</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#courses">Programs <span class="caret">&#9662;</span></a>
+            <div class="mega-dropdown">
+              <div class="mega-column">
+                <h4>Industry Readiness Program</h4>
+                <ul>
+                  <li><a href="#">Industry Quality Assurance and Regulatory Laboratory Practices<span class="prog-date">22, 29 August & 5 September 2026</span></a></li>
+                  <li><a href="#">Microbiology for a Safer Food Industry — Quality, Safety and Sustainability<span class="prog-date">2, 3 & 5 September 2026</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h4>Certified Short Courses</h4>
+                <ul>
+                  <li><a href="course-detail.html?course=applied-quality-control">Applied Quality Control in Zoological Sciences<span class="prog-date">10, 17 & 19 September 2026</span></a></li>
+                  <li><a href="course-detail.html?course=lead-implementor">3 Days Lead Implementer Training Program<span class="prog-date">19, 26 September & 3 October 2026</span></a></li>
+                  <li><a href="course-detail.html?course=sme-launchpad">SME LaunchPad Program<span class="prog-date">29, 30 September & 1 October 2026</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h4>Diploma</h4>
+                <ul>
+                  <li><a href="#">Animation & Game Design (Basic)</a></li>
+                  <li><a href="#">Animation & Game Design (Advanced)</a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h4>Workshops</h4>
+                <ul>
+                  <li><a href="course-detail.html?course=block-screen-print">Block & Screen Print Workshop<span class="prog-date">24 August 2026</span></a></li>
+                  <li><a href="course-detail.html?course=canvas-painting">Canvas Painting Workshop<span class="prog-date">7 September 2026</span></a></li>
+                  <li><a href="course-detail.html?course=basic-crocheting">Basic Crocheting Workshop<span class="prog-date">8 September 2026</span></a></li>
+                  <li><a href="course-detail.html?course=organic-soap">Organic Soap Making Workshop<span class="prog-date">9 September 2026</span></a></li>
+                  <li><a href="course-detail.html?course=facial-serum">Facial Serum Making Workshop<span class="prog-date">30 September 2026</span></a></li>
+                </ul>
+              </div>
+              <div class="mega-column">
+                <h4>Internships</h4>
+                <ul>
+                  <li><a href="internship-application.html">Apply for Internship</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="#apply">Admissions</a></li>
+          <li><a href="#news-events">News &amp; Events</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- Hero Banner (IBA CEE Style) -->
+  <section class="hero-iba">
+    <div class="hero-slideshow" id="heroSlideshow">
+      <div class="slide active" style="background-image:url('images-juw/img-01.jpg')"></div>
+      <div class="slide" style="background-image:url('images-juw/img-02.jpg')"></div>
+      <div class="slide" style="background-image:url('images-juw/img-03.jpg')"></div>
+      <div class="slide" style="background-image:url('images-juw/img-04.jpg')"></div>
+    </div>
+    <div class="hero-content">
+      <h1>Empowering Women Through <span>Professional Excellence</span></h1>
+      <p>Enhance Your Career with Industry-Aligned Short Courses, Professional Certifications, and Executive Diplomas designed for practical skill development.</p>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Programs & Short Courses</h2>
+      </div>
+
+      <div class="filter-bar">
+        <div class="tabs-group">
+          <button class="tab-btn active" data-filter="all">All Programs</button>
+          <button class="tab-btn" data-filter="certificate">Certified Short Courses</button>
+          <button class="tab-btn" data-filter="industry">Industry Readiness Program</button>
+          <button class="tab-btn" data-filter="diploma">Diplomas</button>
+          <button class="tab-btn" data-filter="workshop">Workshops</button>
+<button class="tab-btn" data-filter="internship">Internship</button>
+        </div>
+        <div class="search-box">
+          <input type="text" id="courseSearch" placeholder="Search courses...">
+        </div>
+      </div>
+
+      <div class="course-grid" id="courseGrid">
+        <p class="filter-empty" id="filterEmpty" hidden>No programs listed in this category yet. Check back soon.</p>
+        <!-- Card 1: Canvas Painting -->
+        <div class="course-card" data-type="workshop">
+          <img src="images-juw/img-06.jpg" alt="Canvas Painting Workshop" class="card-banner" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Canvas Painting Workshop</h3>
+            <div class="card-meta">
+              <span>&#128197; 7 September, 2026</span>
+              <span>&#128205; E-26, JUW Karachi</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="course-detail.html?course=canvas-painting" class="btn-details">Workshop Details</a>
+            <a href="#apply" class="btn-apply-card">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Basic Crocheting -->
+        <div class="course-card" data-type="workshop">
+          <img src="https://images.unsplash.com/photo-1468927201227-35e86293a0c8?auto=format&fit=crop&w=600&q=80" alt="Basic Crocheting Workshop" class="card-banner">
+          <div class="card-body">
+            <h3>Basic Crocheting Workshop</h3>
+            <div class="card-meta">
+              <span>&#128197; 8 September, 2026</span>
+              <span>&#128205; E-26, JUW Karachi</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="course-detail.html?course=basic-crocheting" class="btn-details">Workshop Details</a>
+            <a href="#apply" class="btn-apply-card">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Block & Screen Print -->
+        <div class="course-card" data-type="workshop">
+          <img src="images-juw/img-07.jpg" alt="Block & Screen Print Workshop" class="card-banner" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Block & Screen Print Workshop</h3>
+            <div class="card-meta">
+              <span>&#128197; 24 August, 2026</span>
+              <span>&#128205; Visual Studies Dept, JUW</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="course-detail.html?course=block-screen-print" class="btn-details">Workshop Details</a>
+            <a href="#apply" class="btn-apply-card">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Organic Soap Making -->
+        <div class="course-card" data-type="workshop">
+          <img src="images-juw/img-08.jpg" alt="Organic Soap Making Workshop" class="card-banner" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Organic Soap Making Workshop</h3>
+            <div class="card-meta">
+              <span>&#128197; 9 September, 2026</span>
+              <span>&#128205; C-12, JUW Karachi</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="course-detail.html?course=organic-soap" class="btn-details">Workshop Details</a>
+            <a href="#apply" class="btn-apply-card">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Facial Serum Making -->
+        <div class="course-card" data-type="workshop">
+          <img src="images-juw/img-09.jpg" alt="Facial Serum Making Workshop" class="card-banner" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Facial Serum Making Workshop</h3>
+            <div class="card-meta">
+              <span>&#128197; 30 September, 2026</span>
+              <span>&#128205; C-12, JUW Karachi</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="course-detail.html?course=facial-serum" class="btn-details">Workshop Details</a>
+            <a href="#apply" class="btn-apply-card">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Card 6: Applied Quality Control -->
+        <div class="course-card" data-type="certificate">
+          <img src="images-juw/img-10.jpg" alt="Applied Quality Control in Zoological Sciences" class="card-banner" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Applied Quality Control in Zoological Sciences</h3>
+            <div class="card-meta">
+              <span>&#128197; 10, 17 & 19 September, 2026</span>
+              <span>&#128205; G-26 New Council Room, JUW</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="course-detail.html?course=applied-quality-control" class="btn-details">Course Details</a>
+            <a href="#apply" class="btn-apply-card">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Card 7: SME Launch Pad -->
+        <div class="course-card" data-type="certificate">
+          <img src="images-juw/img-11.jpg" alt="SME Launch Pad Program" class="card-banner" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>SME LaunchPad Program</h3>
+            <div class="card-meta">
+              <span>&#128197; 29, 30 September & 1 October, 2026</span>
+              <span>&#128205; State Bank of Pakistan, Nazimabad</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="course-detail.html?course=sme-launchpad" class="btn-details">Course Details</a>
+            <a href="https://forms.gle/ymeTWzXqRP62dhAL8" target="_blank" rel="noopener" class="btn-apply-card">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Card 8: Lead Implementor Training -->
+        <div class="course-card" data-type="certificate">
+          <img src="images-juw/img-12.jpg" alt="Lead Implementor Training Program" class="card-banner" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>3 Days Lead Implementor Training Program</h3>
+            <div class="card-meta">
+              <span>&#128197; 19, 26 September & 3 October, 2026</span>
+              <span>&#128205; Jinnah University for Women</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="course-detail.html?course=lead-implementor" class="btn-details">Course Details</a>
+            <a href="https://forms.gle/m4C9qP6KkpJ2JV258" target="_blank" rel="noopener" class="btn-apply-card">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Card 9: Industry Quality Assurance (Industry Readiness Program) -->
+        <div class="course-card" data-type="industry">
+          <img src="images-juw/industry-quality-assurance-card.png" alt="Industry Quality Assurance and Regulatory Laboratory Practices" class="card-banner" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Industry Quality Assurance and Regulatory Laboratory Practices</h3>
+            <div class="card-meta">
+              <span>&#128197; 22, 29 August &amp; 5 September, 2026</span>
+              <span>&#128205; Jinnah University for Women, Karachi</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="course-detail.html?course=industry-quality-assurance" class="btn-details">Course Details</a>
+            <a href="Industry%20Readiness%20Program%20Details.docx" class="btn-brochure" target="_blank" rel="noopener">&#128229; Download Details</a>
+            <a href="#apply" class="btn-apply-card">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Card 10: Microbiology for a Safer Food Industry (Industry Readiness Program) -->
+        <div class="course-card" data-type="industry">
+          <img src="images-juw/food-safety-card.png" alt="Microbiology for a Safer Food Industry - Quality, Safety and Sustainability" class="card-banner" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Microbiology for a Safer Food Industry: Quality, Safety and Sustainability</h3>
+            <div class="card-meta">
+              <span>&#128197; 2, 3 &amp; 5 September, 2026</span>
+              <span>&#128205; Muhammad Uzair Auditorium, JUW</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="course-detail.html?course=microbiology-food-safety" class="btn-details">Course Details</a>
+            <a href="Industry%20Readiness%20Program%20Details.docx" class="btn-brochure" target="_blank" rel="noopener">&#128229; Download Details</a>
+            <a href="#apply" class="btn-apply-card">Apply Now</a>
+          </div>
+        </div>
+
+        <!-- Promo Card (fills remaining grid space) -->
+        <div class="promo-card" id="promoCard">
+          <div class="promo-overlay">
+            <span class="promo-label">Enrollment Open</span>
+            <h3>New Programs Added Every Semester</h3>
+            <p>Explore certificate courses, diplomas & workshops designed for your career growth.</p>
+            <a href="#courses" class="promo-btn">View All Programs &#8594;</a>
+          </div>
+          <svg class="promo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3L2 8l10 5 10-5-10-5zM6 10.5V16c0 1.5 2.5 3 6 3s6-1.5 6-3v-5.5M22 8v6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+  </section>
+
+ <!-- Numbers / Stats Bar -->
+      <div class="numbers-bar">
+        <h3>JUW IPE in Numbers</h3>
+        <div class="numbers-grid">
+          <div class="number-item">
+            <b>50+</b>
+            <span>Programs Conducted Since 2026</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v9M8 8l4-5 4 5M4 21h16M6 21V11M18 21V11M10 21v-6M14 21v-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="number-item">
+            <b>5+</b>
+            <span>Campuses Where Workshops Are Delivered</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21V8l6-4 6 4v13M4 21h16M10 21v-5h4v5M9 12h.01M9 9h.01M15 12h.01M15 9h.01" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="number-item">
+            <b>1,200+</b>
+            <span>Participants Trained</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM4 21v-1a6 6 0 016-6h4a6 6 0 016 6v1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="number-item">
+            <b>10+</b>
+            <span>National & International Collaborations</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12a4 4 0 100-8 4 4 0 000 8zM2 20c0-3 2.5-5 6-5s6 2 6 5M17 12a3 3 0 100-6 3 3 0 000 6zM14.5 15c2.7.3 4.5 2 4.5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+
+  <!-- Partners & Collaborators -->
+  <section class="partners-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Partners &amp; Collaborators</h2>
+      </div>
+      <p class="section-subtitle">Trusted by leading institutions and industry organizations across Pakistan and beyond.</p>
+
+      <!-- TO ADD REAL LOGOS: drop the image files into images-juw/partners/ and replace
+           <span class="partner-name">NAME</span> with <img src="images-juw/partners/FILE.png" alt="NAME">
+           (tiles already style images with object-fit: contain; max-height: 60px) -->
+      <div class="partners-grid">
+        <div class="partner-tile" data-logo="images-juw/partners/pcsir-laboratories.png">
+          <span class="partner-name">PCSIR Laboratories</span>
+        </div>
+        <div class="partner-tile" data-logo="images-juw/partners/national-foods.png">
+          <span class="partner-name">National Foods</span>
+        </div>
+        <div class="partner-tile" data-logo="images-juw/partners/ministry-of-maritime-affairs.png">
+          <span class="partner-name">Ministry of Maritime Affairs</span>
+        </div>
+        <div class="partner-tile" data-logo="images-juw/partners/marine-fisheries-department.png">
+          <span class="partner-name">Marine Fisheries Department</span>
+        </div>
+        <div class="partner-tile" data-logo="images-juw/partners/jinnah-university-for-women.png">
+          <span class="partner-name">Jinnah University for Women</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Our Participants Say</h2>
+      </div>
+      <p class="section-subtitle">Hear from professionals and students who have completed our programs.</p>
+
+      <!-- REPLACE WITH REAL TESTIMONIALS -->
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-mark">&ldquo;</div>
+          <p class="testimonial-text">The hands-on sessions and industry experts made the program truly practical. I could apply what I learned at work immediately.</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-name">Participant Name</div>
+          <div class="testimonial-prog">Industry Readiness Program</div>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-mark">&ldquo;</div>
+          <p class="testimonial-text">Well organized, professional, and very relevant to today&rsquo;s job market. Highly recommended for students and professionals alike.</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-name">Participant Name</div>
+          <div class="testimonial-prog">Professional Certification</div>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-mark">&ldquo;</div>
+          <p class="testimonial-text">The weekend schedule suited my job perfectly, and the certificate has already added value to my career.</p>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-name">Participant Name</div>
+          <div class="testimonial-prog">Executive Short Course</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / Why Choose JUW -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose JUW Executive Education</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-box">
+          <h4>Expert Faculty</h4>
+          <p>Learn from industry practitioners and senior academic leaders.</p>
+        </div>
+        <div class="feature-box">
+          <h4>Practical Exposure</h4>
+          <p>Hands-on projects, case studies, and real-world tools applications.</p>
+        </div>
+        <div class="feature-box">
+          <h4>Flexible Schedules</h4>
+          <p>Weekend and evening sessions designed for working professionals.</p>
+        </div>
+        <div class="feature-box">
+          <h4>Career Growth</h4>
+          <p>Recognized certifications to boost professional advancement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form Section -->
+  <section id="apply">
+    <div class="container">
+      <div class="section-title">
+        <h2>Online Admission Form</h2>
+      </div>
+      <div class="apply-container">
+        <form id="admissionForm" novalidate>
+          <div class="step-indicator">
+            <div class="step-item is-active"><span class="step-dot">1</span><span class="step-label">Personal Info</span></div>
+            <div class="step-item"><span class="step-dot">2</span><span class="step-label">Program</span></div>
+            <div class="step-item"><span class="step-dot">3</span><span class="step-label">Experience</span></div>
+          </div>
+
+          <div class="form-step is-active" data-step="1">
+          <div class="form-section">
+            <h3 class="form-section-title">Personal Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="adm-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="adm-name" name="name" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="adm-father">Father's / Guardian's Name <span class="req">*</span></label>
+                <input type="text" id="adm-father" name="father" placeholder="Enter father's or guardian's name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="adm-email">Email Address <span class="req">*</span></label>
+                <input type="email" id="adm-email" name="email" placeholder="example@domain.com" required>
+              </div>
+              <div class="form-group">
+                <label for="adm-phone">Phone / WhatsApp / Contact Number <span class="req">*</span></label>
+                <input type="tel" id="adm-phone" name="phone" placeholder="03xx-xxxxxxx" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="adm-cnic">CNIC / B-Form Number <span class="req">*</span></label>
+                <input type="text" id="adm-cnic" name="cnic" placeholder="xxxxx-xxxxxxx-x" required>
+              </div>
+              <div class="form-group">
+                <label for="adm-dob">Date of Birth <span class="req">*</span></label>
+                <input type="date" id="adm-dob" name="dob" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="adm-city">City <span class="req">*</span></label>
+              <input type="text" id="adm-city" name="city" placeholder="Enter your city" required>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3 class="form-section-title">Educational Background</h3>
+            <div class="form-group">
+              <label for="adm-edu-status">Current Educational Status <span class="req">*</span></label>
+              <select id="adm-edu-status" name="edu_status" required>
+                <option value="">Select your current status...</option>
+                <option>Matriculation</option>
+                <option>Intermediate</option>
+                <option>Bachelor's</option>
+                <option>Master's</option>
+                <option>MPhil / PhD</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="adm-institution">Institution / Organization Name <span class="req">*</span></label>
+                <input type="text" id="adm-institution" name="institution" placeholder="Enter institution name" required>
+              </div>
+              <div class="form-group">
+                <label for="adm-department">Department / Field of Study <span class="req">*</span></label>
+                <input type="text" id="adm-department" name="department" placeholder="e.g. Computer Science" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="adm-semester">Current Semester / Year</label>
+              <input type="text" id="adm-semester" name="semester" placeholder="e.g. 4th Semester / 2nd Year">
+            </div>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn-step btn-next">Next</button>
+          </div>
+          </div><!-- /form-step 1 -->
+
+          <div class="form-step" data-step="2">
+          <div class="form-section">
+            <h3 class="form-section-title">Employment Information</h3>
+            <div class="form-group">
+              <label>Are you currently employed? <span class="req">*</span></label>
+              <div class="radio-row">
+                <label for="adm-employed-yes"><input type="radio" id="adm-employed-yes" name="employed" value="Yes" required> Yes</label>
+                <label for="adm-employed-no"><input type="radio" id="adm-employed-no" name="employed" value="No"> No</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="adm-designation">If employed, mention designation / area of work</label>
+              <input type="text" id="adm-designation" name="designation" placeholder="e.g. Teacher / Marketing Executive">
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3 class="form-section-title">Program Selection</h3>
+            <div class="form-group">
+              <label for="adm-program">Select the IPE Course/Program You Are Interested In <span class="req">*</span></label>
+              <select id="adm-program" name="program" required>
+                <option value="">Select a program...</option>
+                <option>Canvas Painting Workshop</option>
+                <option>Basic Crocheting Workshop</option>
+                <option>Block &amp; Screen Print Workshop</option>
+                <option>Organic Soap Making Workshop</option>
+                <option>Facial Serum Making Workshop</option>
+                <option>Applied Quality Control in Zoological Sciences</option>
+                <option>SME LaunchPad Program</option>
+                <option>3 Days Lead Implementer Training Program</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>What is your primary objective for joining this program?</label>
+              <div class="check-grid">
+                <label for="obj-1"><input type="checkbox" id="obj-1" name="objective" value="Academic Development"> Academic Development</label>
+                <label for="obj-2"><input type="checkbox" id="obj-2" name="objective" value="Professional Skill Development"> Professional Skill Development</label>
+                <label for="obj-3"><input type="checkbox" id="obj-3" name="objective" value="Career Advancement"> Career Advancement</label>
+                <label for="obj-4"><input type="checkbox" id="obj-4" name="objective" value="Employment Preparation"> Employment Preparation</label>
+                <label for="obj-5"><input type="checkbox" id="obj-5" name="objective" value="Entrepreneurship"> Entrepreneurship</label>
+                <label for="obj-6"><input type="checkbox" id="obj-6" name="objective" value="Freelancing"> Freelancing</label>
+                <label for="obj-7"><input type="checkbox" id="obj-7" name="objective" value="Personal Development"> Personal Development</label>
+                <label for="obj-8"><input type="checkbox" id="obj-8" name="objective" value="Industry Exposure"> Industry Exposure</label>
+                <label for="obj-9"><input type="checkbox" id="obj-9" name="objective" value="Certification"> Certification</label>
+                <label for="obj-10"><input type="checkbox" id="obj-10" name="objective" value="Other"> Other</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn-step btn-prev">Back</button>
+            <button type="button" class="btn-step btn-next">Next</button>
+          </div>
+          </div><!-- /form-step 2 -->
+
+          <div class="form-step" data-step="3">
+          <div class="form-section">
+            <h3 class="form-section-title">Experience &amp; Background</h3>
+            <div class="form-group">
+              <label>How would you describe your current level of knowledge? <span class="req">*</span></label>
+              <div class="radio-row">
+                <label for="lvl-beginner"><input type="radio" id="lvl-beginner" name="knowledge_level" value="Beginner" required> Beginner</label>
+                <label for="lvl-basic"><input type="radio" id="lvl-basic" name="knowledge_level" value="Basic"> Basic</label>
+                <label for="lvl-intermediate"><input type="radio" id="lvl-intermediate" name="knowledge_level" value="Intermediate"> Intermediate</label>
+                <label for="lvl-advanced"><input type="radio" id="lvl-advanced" name="knowledge_level" value="Advanced"> Advanced</label>
+                <label for="lvl-professional"><input type="radio" id="lvl-professional" name="knowledge_level" value="Professional"> Professional</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Previous experience in this field? <span class="req">*</span></label>
+              <div class="radio-row">
+                <label for="exp-yes"><input type="radio" id="exp-yes" name="previous_experience" value="Yes" required> Yes</label>
+                <label for="exp-no"><input type="radio" id="exp-no" name="previous_experience" value="No"> No</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="adm-source">How did you hear about IPE? <span class="req">*</span></label>
+              <select id="adm-source" name="source" required>
+                <option value="">Select an option...</option>
+                <option>Social Media (Facebook / Instagram)</option>
+                <option>WhatsApp</option>
+                <option>Friend / Family Reference</option>
+                <option>University / College</option>
+                <option>IPE Website</option>
+                <option>Email / Newsletter</option>
+                <option>Newspaper / Flyer</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Participated in any IPE program before? <span class="req">*</span></label>
+              <div class="radio-row">
+                <label for="prev-yes"><input type="radio" id="prev-yes" name="previous_participant" value="Yes" required> Yes</label>
+                <label for="prev-no"><input type="radio" id="prev-no" name="previous_participant" value="No"> No</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="adm-prev-program">If yes mention program/course/workshop</label>
+              <input type="text" id="adm-prev-program" name="previous_program" placeholder="e.g. Organic Soap Making Workshop">
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3 class="form-section-title">Additional</h3>
+            <div class="form-group">
+              <label>Receive updates about upcoming IPE courses? <span class="req">*</span></label>
+              <div class="radio-row">
+                <label for="upd-yes"><input type="radio" id="upd-yes" name="updates" value="Yes" required> Yes</label>
+                <label for="upd-no"><input type="radio" id="upd-no" name="updates" value="No"> No</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="adm-comments">Additional Comments/Requirements</label>
+              <textarea id="adm-comments" name="comments" placeholder="Write any additional comments or requirements..."></textarea>
+            </div>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn-step btn-prev">Back</button>
+          </div>
+
+          <p class="form-note">Please review your details before submitting your application.</p>
+          <button type="submit" class="btn-apply" style="width: 100%; border:none; padding: 12px; cursor:pointer;">Submit Application</button>
+          </div><!-- /form-step 3 -->
+        </form>
+
+        <div class="form-success" id="formSuccess" hidden>
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+          </div>
+          <h3 class="success-title">Application Submitted Successfully</h3>
+          <p class="success-text">Thank you! Your application has been received. Our team will contact you shortly with the next steps.</p>
+          <button type="button" class="btn-step btn-prev" id="formAgainBtn">Submit Another Application</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News & Events -->
+  <section id="news-events" class="news-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>News &amp; Events</h2>
+      </div>
+      <p class="section-subtitle">Stay updated with the latest workshops, announcements, and activities at JUW IPE.</p>
+
+      <!-- REPLACE WITH REAL NEWS & EVENTS -->
+      <div class="news-grid">
+        <article class="news-card">
+          <!-- Placeholder color block. For a real image use:
+               <div class="news-thumb"><img src="images-juw/news/FILE.jpg" alt=""></div> -->
+          <div class="news-thumb">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 11h18"></path></svg>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-cat">Event</span>
+              <span class="news-date">2, 3 &amp; 5 September 2026</span>
+            </div>
+            <h3>Industry Readiness Program: Food Safety &amp; Microbiology</h3>
+            <p>A three-day hands-on workshop on food safety, microbiological testing and quality assurance.</p>
+            <a href="#" class="news-more">Read More &#8594;</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-thumb">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2z"></path><path d="M14 3v6h6M8 13h8M8 17h6"></path></svg>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-cat is-news">News</span>
+              <span class="news-date">September 2026</span>
+            </div>
+            <h3>JUW IPE Crosses 1,200+ Participants Trained</h3>
+            <p>5 campuses, 50+ programs and 10+ national and international collaborations since 2026.</p>
+            <a href="#" class="news-more">Read More &#8594;</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-thumb">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.2 5.5.8-4 3.9.9 5.6L12 15.9 7.1 18.5l.9-5.6-4-3.9 5.5-.8z"></path></svg>
+          </div>
+          <div class="news-body">
+            <div class="news-meta">
+              <span class="news-cat">Event</span>
+              <span class="news-date">10 - 19 September 2026</span>
+            </div>
+            <h3>Upcoming Professional Certification Workshops</h3>
+            <p>New intakes open for quality control, lead implementation and SME launchpad workshops.</p>
+            <a href="#" class="news-more">Read More &#8594;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Jinnah University for Women</h4>
+          <p>5C, Nazimabad, Karachi, Pakistan.<br>Empowering women through higher education and practical skill development.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about-ipe.html">About IPE</a></li>
+            <li><a href="#courses">Short Courses</a></li>
+            <li><a href="#courses">Executive Diplomas</a></li>
+            <li><a href="#apply">Admissions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Info</h4>
+          <ul>
+            <li>Email: <a href="mailto:info@juw.edu.pk">info@juw.edu.pk</a></li>
+            <li>Phone: +92-21-36620857</li>
+            <li>WhatsApp: Contact via phone</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Office Hours</h4>
+          <p>Monday - Saturday<br>9:00 AM - 5:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Jinnah University for Women. All Rights Reserved. Designed in JUW IPE Layout Structure.</p>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Hero Background Slideshow
+  var slides = document.querySelectorAll('#heroSlideshow .slide');
+  if (slides.length > 1) {
+    var currentSlide = 0;
+    setInterval(function() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
+  }
+
+  // Hamburger Menu
+  var hamburger = document.getElementById('hamburger');
+  var navMenu = document.getElementById('navMenu');
+  var overlay = document.getElementById('mobileOverlay');
+
+  function toggleMenu() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  hamburger.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
+  });
+
+  overlay.addEventListener('click', toggleMenu);
+
+  // Dropdown toggle (mobile: click to open/close; desktop: hover via CSS)
+  document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        var parentLi = link.parentElement;
+        var wasOpen = parentLi.classList.contains('open');
+        document.querySelectorAll('.has-dropdown').forEach(function(li) {
+          li.classList.remove('open');
+        });
+        if (!wasOpen) parentLi.classList.add('open');
+      }
+    });
+  });
+
+  navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      // Don't close the whole mobile menu when just opening a dropdown parent
+      if (link.parentElement.classList.contains('has-dropdown') && window.innerWidth <= 768) return;
+      if (navMenu.classList.contains('active')) toggleMenu();
+    });
+  });
+
+  // Tab Filtering + Search
+  var tabBtns = document.querySelectorAll('.tab-btn');
+  var courseCards = document.querySelectorAll('.course-card');
+  var searchInput = document.getElementById('courseSearch');
+  var emptyMsg = document.getElementById('filterEmpty');
+  var activeFilter = 'all';
+
+  function applyFilters() {
+    var query = (searchInput && searchInput.value ? searchInput.value : '').trim().toLowerCase();
+    var visible = 0;
+
+    courseCards.forEach(function(card) {
+      var type = card.dataset.type || '';
+      var titleEl = card.querySelector('h3');
+      var title = titleEl ? titleEl.textContent.toLowerCase() : '';
+      var typeMatch = activeFilter === 'all' || type === activeFilter;
+      var searchMatch = !query || title.indexOf(query) !== -1;
+      var show = typeMatch && searchMatch;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    if (emptyMsg) emptyMsg.hidden = visible > 0;
+    var promo = document.getElementById('promoCard');
+    if (promo) promo.style.display = (activeFilter === 'all' && !query) ? '' : 'none';
+  }
+
+  tabBtns.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      tabBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeFilter = btn.dataset.filter || 'all';
+      applyFilters();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', applyFilters);
+  }
+
+  // Admission form: multi-step wizard + open official Google Form
+  var admissionForm = document.getElementById('admissionForm');
+  if (admissionForm) {
+    var steps = admissionForm.querySelectorAll('.form-step');
+    var stepItems = admissionForm.querySelectorAll('.step-item');
+    var currentStep = 0;
+
+    function showStep(n, scroll) {
+      currentStep = n;
+      steps.forEach(function(step, i) { step.classList.toggle('is-active', i === n); });
+      stepItems.forEach(function(item, i) {
+        item.classList.toggle('is-active', i === n);
+        item.classList.toggle('is-done', i < n);
+      });
+      if (scroll !== false) {
+        var card = document.querySelector('.apply-container');
+        if (card) {
+          var top = card.getBoundingClientRect().top + window.pageYOffset - 90;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      }
+    }
+
+    function validateStep(step) {
+      var fields = step.querySelectorAll('input, select, textarea');
+      for (var i = 0; i < fields.length; i++) {
+        if (!fields[i].checkValidity()) {
+          fields[i].reportValidity();
+          return false;
+        }
+      }
+      return true;
+    }
+
+    steps.forEach(function(step, i) {
+      var btnNext = step.querySelector('.btn-next');
+      if (btnNext) {
+        btnNext.addEventListener('click', function() {
+          if (validateStep(step)) showStep(i + 1);
+        });
+      }
+      var btnPrev = step.querySelector('.btn-prev');
+      if (btnPrev) {
+        btnPrev.addEventListener('click', function() { showStep(i - 1); });
+      }
+    });
+
+    admissionForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var fields = admissionForm.querySelectorAll('input, select, textarea');
+      for (var i = 0; i < fields.length; i++) {
+        if (!fields[i].checkValidity()) {
+          var step = fields[i].closest('.form-step');
+          if (step) showStep(Array.prototype.indexOf.call(steps, step));
+          fields[i].reportValidity();
+          return;
+        }
+      }
+      var success = document.getElementById('formSuccess');
+      admissionForm.hidden = true;
+      if (success) success.hidden = false;
+      var card = document.querySelector('.apply-container');
+      if (card) {
+        window.scrollTo({ top: card.getBoundingClientRect().top + window.pageYOffset - 90, behavior: 'smooth' });
+      }
+    });
+
+    var againBtn = document.getElementById('formAgainBtn');
+    if (againBtn) {
+      againBtn.addEventListener('click', function() {
+        admissionForm.reset();
+        var success = document.getElementById('formSuccess');
+        if (success) success.hidden = true;
+        admissionForm.hidden = false;
+        showStep(0, false);
+      });
+    }
+
+    showStep(0, false);
+  }
+
+});
+</script>
+</body>
+</html>
+ 
