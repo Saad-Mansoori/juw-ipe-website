@@ -118,73 +118,154 @@
   .caret { font-size: 10px; margin-left: 3px; display: inline-block; transition: transform 0.2s; }
   .has-dropdown.open .caret { transform: rotate(180deg); }
 
-  .dropdown, .mega-dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    border-radius: 6px;
-    box-shadow: var(--shadow);
-    z-index: 300;
-  }
-  .dropdown {
-    min-width: 220px;
-    padding: 10px 20px;
-    list-style: none;
-  }
-  .dropdown li a {
-    display: block;
-    padding: 10px 0;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: none;
-    color: var(--iba-navy);
-    border-bottom: 1px solid var(--border-color);
-  }
-  .dropdown li:last-child a { border-bottom: none; }
-  .dropdown li a:hover { color: var(--iba-maroon); }
+  /* Dropdowns & Multi-level Flyouts */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #ffffff;
+      min-width: 260px;
+      padding: 6px 0;
+      list-style: none;
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(0, 32, 91, 0.14);
+      border: 1px solid #e2e8f0;
+      z-index: 300;
+    }
 
-  .mega-dropdown {
-    left: auto;
-    right: 0;
-    width: 820px;
-    max-width: 90vw;
-    padding: 28px;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-  }
-  .mega-column h4 {
-    font-size: 13px;
-    color: var(--iba-maroon);
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--bg-light);
-  }
-  .mega-column ul { list-style: none; }
-  .mega-column li { margin-bottom: 12px; }
-  .mega-column a {
-    font-size: 12.5px;
-    font-weight: 500;
-    text-transform: none;
-    color: var(--text-dark);
-    line-height: 1.4;
-    display: block;
-  }
-  .mega-column a:hover { color: var(--iba-maroon); }
-  .prog-date {
-    display: block;
-    font-size: 11px;
-    color: var(--text-muted);
-    font-weight: 400;
-    margin-top: 3px;
-  }
+    .dropdown > li {
+      position: relative;
+    }
 
-  @media (min-width: 769px) {
-    .has-dropdown:hover .dropdown { display: block; }
-    .has-dropdown:hover .mega-dropdown { display: grid; }
-  }
+    .dropdown > li > a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 18px;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-transform: none;
+      color: var(--iba-navy);
+      border-bottom: 1px solid #f1f5f9;
+      transition: all 0.2s ease;
+    }
+
+    .dropdown > li:last-child > a {
+      border-bottom: none;
+    }
+
+    .dropdown > li > a:hover,
+    .dropdown > li.has-submenu:hover > a {
+      background: #f8fafc;
+      color: var(--iba-maroon);
+      padding-left: 22px;
+    }
+
+    .sub-arrow {
+      font-size: 17px;
+      line-height: 1;
+      font-weight: 700;
+      color: #94a3b8;
+      transition: transform 0.2s ease, color 0.2s ease;
+      margin-left: 10px;
+    }
+
+    .dropdown > li.has-submenu:hover > a .sub-arrow {
+      color: var(--iba-maroon);
+      transform: translateX(4px);
+    }
+
+    /* Submenu Flyout (Multi-level panel) */
+    .submenu-flyout {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      min-width: 320px;
+      max-width: 380px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 14px 35px rgba(0, 32, 91, 0.16);
+      border: 1px solid #e2e8f0;
+      padding: 14px 16px;
+      z-index: 350;
+      animation: flyoutSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes flyoutSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .submenu-header {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--iba-maroon);
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      border-bottom: 2px solid #f1f5f9;
+    }
+
+    .submenu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .submenu-list li {
+      margin-bottom: 6px;
+    }
+
+    .submenu-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .submenu-list li a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--iba-navy);
+      text-transform: none;
+      transition: all 0.2s ease;
+      background: transparent;
+      border-bottom: none;
+    }
+
+    .submenu-list li a:hover {
+      background: #f1f5f9;
+      color: var(--iba-maroon);
+      padding-left: 14px;
+    }
+
+    .prog-date {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    @media (min-width: 769px) {
+      .has-dropdown:hover > .dropdown {
+        display: block;
+      }
+
+      .dropdown > li.has-submenu:hover > .submenu-flyout {
+        display: block;
+      }
+    }
 
   .btn-apply {
     background: var(--iba-maroon);
@@ -996,46 +1077,76 @@
           </li>
           <li class="has-dropdown">
             <a href="index.html#courses">Programs <span class="caret">&#9662;</span></a>
-            <div class="mega-dropdown">
-              <div class="mega-column">
-                <h4>Industry Readiness Program</h4>
-                <ul>
-                  <li><a href="course-detail.html?course=industry-quality-assurance">Industry Quality Assurance and Regulatory Laboratory Practices<span class="prog-date">22, 29 August & 5 September 2026</span></a></li>
-                  <li><a href="course-detail.html?course=microbiology-food-safety">Microbiology for a Safer Food Industry — Quality, Safety and Sustainability<span class="prog-date">2, 3 & 5 September 2026</span></a></li>
-                </ul>
-              </div>
-              <div class="mega-column">
-                <h4>Certified Short Courses</h4>
-                <ul>
-                  <li><a href="#">Applied Quality Control in Zoological Sciences<span class="prog-date">10, 17 & 19 September 2026</span></a></li>
-                  <li><a href="#">3 Days Lead Implementer Training Program<span class="prog-date">19, 26 September & 3 October 2026</span></a></li>
-                  <li><a href="#">SME LaunchPad Program<span class="prog-date">29, 30 September & 1 October 2026</span></a></li>
-                </ul>
-              </div>
-              <div class="mega-column">
-                <h4>Diploma</h4>
-                <ul>
-                  <li><a href="course-detail.html?course=animation-game-design-basic">Animation &amp; Game Design (Basic)<span class="prog-date">6 Months</span></a></li>
-                  <li><a href="course-detail.html?course=animation-game-design-advance">Animation &amp; Game Design (Advance)<span class="prog-date">1 Year</span></a></li>
-                </ul>
-              </div>
-              <div class="mega-column">
-                <h4>Workshops</h4>
-                <ul>
-                  <li><a href="#">Block & Screen Print Workshop<span class="prog-date">24 August 2026</span></a></li>
-                  <li><a href="#">Canvas Painting Workshop<span class="prog-date">7 September 2026</span></a></li>
-                  <li><a href="#">Basic Crocheting Workshop<span class="prog-date">8 September 2026</span></a></li>
-                  <li><a href="#">Organic Soap Making Workshop<span class="prog-date">9 September 2026</span></a></li>
-                  <li><a href="#">Facial Serum Making Workshop<span class="prog-date">30 September 2026</span></a></li>
-                </ul>
-              </div>
-              <div class="mega-column">
-                <h4>Internships</h4>
-                <ul>
-                  <li><a href="internship-application.html">Apply for Internship</a></li>
-                </ul>
-              </div>
-            </div>
+            <ul class="dropdown programs-dropdown">
+              <li class="has-submenu">
+                <a href="index.html#courses">
+                  <span>Industry Readiness Program</span>
+                  <span class="sub-arrow">&#8250;</span>
+                </a>
+                <div class="submenu-flyout">
+                  <div class="submenu-header">Industry Readiness Program</div>
+                  <ul class="submenu-list">
+                    <li><a href="#">Industry Quality Assurance and Regulatory Laboratory Practices<span class="prog-date">22, 29 August &amp; 5 September 2026</span></a></li>
+                    <li><a href="#">Microbiology for a Safer Food Industry — Quality, Safety and Sustainability<span class="prog-date">2, 3 &amp; 5 September 2026</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <a href="index.html#courses">
+                  <span>Certified Short Courses</span>
+                  <span class="sub-arrow">&#8250;</span>
+                </a>
+                <div class="submenu-flyout">
+                  <div class="submenu-header">Certified Short Courses</div>
+                  <ul class="submenu-list">
+                    <li><a href="course-detail.html?course=applied-quality-control">Applied Quality Control in Zoological Sciences<span class="prog-date">10, 17 &amp; 19 September 2026</span></a></li>
+                    <li><a href="course-detail.html?course=lead-implementor">3 Days Lead Implementer Training Program<span class="prog-date">19, 26 September &amp; 3 October 2026</span></a></li>
+                    <li><a href="course-detail.html?course=sme-launchpad">SME LaunchPad Program<span class="prog-date">29, 30 September &amp; 1 October 2026</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <a href="index.html#courses">
+                  <span>Diploma</span>
+                  <span class="sub-arrow">&#8250;</span>
+                </a>
+                <div class="submenu-flyout">
+                  <div class="submenu-header">Diploma Programs</div>
+                  <ul class="submenu-list">
+                    <li><a href="course-detail.html?course=animation-game-design-basic">Animation &amp; Game Design (Basic)<span class="prog-date">6 Months</span></a></li>
+                    <li><a href="course-detail.html?course=animation-game-design-advance">Animation &amp; Game Design (Advance)<span class="prog-date">1 Year</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <a href="index.html#courses">
+                  <span>Workshops</span>
+                  <span class="sub-arrow">&#8250;</span>
+                </a>
+                <div class="submenu-flyout">
+                  <div class="submenu-header">Workshops</div>
+                  <ul class="submenu-list">
+                    <li><a href="course-detail.html?course=block-screen-print">Block &amp; Screen Print Workshop<span class="prog-date">24 August 2026</span></a></li>
+                    <li><a href="course-detail.html?course=canvas-painting">Canvas Painting Workshop<span class="prog-date">7 September 2026</span></a></li>
+                    <li><a href="course-detail.html?course=basic-crocheting">Basic Crocheting Workshop<span class="prog-date">8 September 2026</span></a></li>
+                    <li><a href="course-detail.html?course=organic-soap">Organic Soap Making Workshop<span class="prog-date">9 September 2026</span></a></li>
+                    <li><a href="course-detail.html?course=facial-serum">Facial Serum Making Workshop<span class="prog-date">30 September 2026</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <a href="internship-application.html">
+                  <span>Internships</span>
+                  <span class="sub-arrow">&#8250;</span>
+                </a>
+                <div class="submenu-flyout">
+                  <div class="submenu-header">Internships</div>
+                  <ul class="submenu-list">
+                    <li><a href="internship-application.html">Apply for Internship<span class="prog-date">Applications Open</span></a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </li>
           <li><a href="index.html#apply">Admissions</a></li>
           <li><a href="index.html#contact">Contact</a></li>

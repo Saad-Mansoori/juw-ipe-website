@@ -137,97 +137,152 @@
       transform: rotate(180deg);
     }
 
-    .dropdown,
-    .mega-dropdown {
+    /* Dropdowns & Multi-level Flyouts */
+    .dropdown {
       display: none;
       position: absolute;
       top: 100%;
       left: 0;
-      background: #fff;
-      border-radius: 6px;
-      box-shadow: var(--shadow);
+      background: #ffffff;
+      min-width: 260px;
+      padding: 6px 0;
+      list-style: none;
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(0, 32, 91, 0.14);
+      border: 1px solid #e2e8f0;
       z-index: 300;
     }
 
-    .dropdown {
-      min-width: 220px;
-      padding: 10px 20px;
-      list-style: none;
+    .dropdown > li {
+      position: relative;
     }
 
-    .dropdown li a {
-      display: block;
-      padding: 10px 0;
-      font-size: 13px;
+    .dropdown > li > a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 18px;
+      font-size: 13.5px;
       font-weight: 600;
       text-transform: none;
       color: var(--iba-navy);
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid #f1f5f9;
+      transition: all 0.2s ease;
     }
 
-    .dropdown li:last-child a {
+    .dropdown > li:last-child > a {
       border-bottom: none;
     }
 
-    .dropdown li a:hover {
+    .dropdown > li > a:hover,
+    .dropdown > li.has-submenu:hover > a {
+      background: #f8fafc;
       color: var(--iba-maroon);
+      padding-left: 22px;
     }
 
-    .mega-dropdown {
-      left: auto;
-      right: 0;
-      width: 820px;
-      max-width: 90vw;
-      padding: 28px;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
+    .sub-arrow {
+      font-size: 17px;
+      line-height: 1;
+      font-weight: 700;
+      color: #94a3b8;
+      transition: transform 0.2s ease, color 0.2s ease;
+      margin-left: 10px;
     }
 
-    .mega-column h4 {
-      font-size: 13px;
+    .dropdown > li.has-submenu:hover > a .sub-arrow {
       color: var(--iba-maroon);
+      transform: translateX(4px);
+    }
+
+    /* Submenu Flyout (Multi-level panel) */
+    .submenu-flyout {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      min-width: 320px;
+      max-width: 380px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 14px 35px rgba(0, 32, 91, 0.16);
+      border: 1px solid #e2e8f0;
+      padding: 14px 16px;
+      z-index: 350;
+      animation: flyoutSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes flyoutSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .submenu-header {
+      font-size: 12px;
+      font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--bg-light);
-    }
-
-    .mega-column ul {
-      list-style: none;
-    }
-
-    .mega-column li {
-      margin-bottom: 12px;
-    }
-
-    .mega-column a {
-      font-size: 12.5px;
-      font-weight: 500;
-      text-transform: none;
-      color: var(--text-dark);
-      line-height: 1.4;
-      display: block;
-    }
-
-    .mega-column a:hover {
+      letter-spacing: 0.6px;
       color: var(--iba-maroon);
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      border-bottom: 2px solid #f1f5f9;
+    }
+
+    .submenu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .submenu-list li {
+      margin-bottom: 6px;
+    }
+
+    .submenu-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .submenu-list li a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--iba-navy);
+      text-transform: none;
+      transition: all 0.2s ease;
+      background: transparent;
+      border-bottom: none;
+    }
+
+    .submenu-list li a:hover {
+      background: #f1f5f9;
+      color: var(--iba-maroon);
+      padding-left: 14px;
     }
 
     .prog-date {
       display: block;
       font-size: 11px;
-      color: var(--text-muted);
       font-weight: 400;
-      margin-top: 3px;
+      color: var(--text-muted);
+      margin-top: 2px;
     }
 
     @media (min-width: 769px) {
-      .has-dropdown:hover .dropdown {
+      .has-dropdown:hover > .dropdown {
         display: block;
       }
 
-      .has-dropdown:hover .mega-dropdown {
-        display: grid;
+      .dropdown > li.has-submenu:hover > .submenu-flyout {
+        display: block;
       }
     }
 
@@ -1525,36 +1580,48 @@
       }
 
       /* Mobile dropdowns */
-      .has-dropdown>a {
+      .has-dropdown>a,
+      .has-submenu>a {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
 
-      .dropdown,
-      .mega-dropdown {
+      .dropdown {
         display: none;
         position: static;
         box-shadow: none;
         width: 100%;
-        grid-template-columns: 1fr;
         padding: 0 0 10px 15px;
-        gap: 0;
+        border: none;
+        background: transparent;
       }
 
-      .has-dropdown.open .dropdown,
-      .has-dropdown.open .mega-dropdown {
+      .submenu-flyout {
+        display: none;
+        position: static;
+        box-shadow: none;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 4px 0 10px 15px;
+        border: none;
+        background: transparent;
+      }
+
+      .has-dropdown.open > .dropdown,
+      .has-submenu.open > .submenu-flyout {
         display: block;
       }
 
-      .mega-column {
-        margin-bottom: 15px;
-      }
-
       .dropdown li a,
-      .mega-column a {
+      .submenu-list li a {
         border-bottom: none;
         padding: 8px 0;
+      }
+
+      .has-submenu.open > a .sub-arrow {
+        transform: rotate(90deg);
       }
 
       .brand-logo img {
@@ -1759,58 +1826,76 @@
           </li>
           <li class="has-dropdown">
             <a href="#courses">Programs <span class="caret">&#9662;</span></a>
-            <div class="mega-dropdown">
-              <div class="mega-column">
-                <h4>Industry Readiness Program</h4>
-                <ul>
-                  <li><a href="#">Industry Quality Assurance and Regulatory Laboratory Practices<span
-                        class="prog-date">22, 29 August & 5 September 2026</span></a></li>
-                  <li><a href="#">Microbiology for a Safer Food Industry — Quality, Safety and Sustainability<span
-                        class="prog-date">2, 3 & 5 September 2026</span></a></li>
-                </ul>
-              </div>
-              <div class="mega-column">
-                <h4>Certified Short Courses</h4>
-                <ul>
-                  <li><a href="course-detail.html?course=applied-quality-control">Applied Quality Control in Zoological
-                      Sciences<span class="prog-date">10, 17 & 19 September 2026</span></a></li>
-                  <li><a href="course-detail.html?course=lead-implementor">3 Days Lead Implementer Training Program<span
-                        class="prog-date">19, 26 September & 3 October 2026</span></a></li>
-                  <li><a href="course-detail.html?course=sme-launchpad">SME LaunchPad Program<span class="prog-date">29,
-                        30 September & 1 October 2026</span></a></li>
-                </ul>
-              </div>
-              <div class="mega-column">
-                <h4>Diploma</h4>
-                <ul>
-                  <li><a href="course-detail.html?course=animation-game-design-basic">Animation &amp; Game Design
-                      (Basic)<span class="prog-date">6 Months</span></a></li>
-                  <li><a href="course-detail.html?course=animation-game-design-advance">Animation &amp; Game Design
-                      (Advance)<span class="prog-date">1 Year</span></a></li>
-                </ul>
-              </div>
-              <div class="mega-column">
-                <h4>Workshops</h4>
-                <ul>
-                  <li><a href="course-detail.html?course=block-screen-print">Block & Screen Print Workshop<span
-                        class="prog-date">24 August 2026</span></a></li>
-                  <li><a href="course-detail.html?course=canvas-painting">Canvas Painting Workshop<span
-                        class="prog-date">7 September 2026</span></a></li>
-                  <li><a href="course-detail.html?course=basic-crocheting">Basic Crocheting Workshop<span
-                        class="prog-date">8 September 2026</span></a></li>
-                  <li><a href="course-detail.html?course=organic-soap">Organic Soap Making Workshop<span
-                        class="prog-date">9 September 2026</span></a></li>
-                  <li><a href="course-detail.html?course=facial-serum">Facial Serum Making Workshop<span
-                        class="prog-date">30 September 2026</span></a></li>
-                </ul>
-              </div>
-              <div class="mega-column">
-                <h4>Internships</h4>
-                <ul>
-                  <li><a href="internship-application.html">Apply for Internship</a></li>
-                </ul>
-              </div>
-            </div>
+            <ul class="dropdown programs-dropdown">
+              <li class="has-submenu">
+                <a href="#courses">
+                  <span>Industry Readiness Program</span>
+                  <span class="sub-arrow">&#8250;</span>
+                </a>
+                <div class="submenu-flyout">
+                  <div class="submenu-header">Industry Readiness Program</div>
+                  <ul class="submenu-list">
+                    <li><a href="#">Industry Quality Assurance and Regulatory Laboratory Practices<span class="prog-date">22, 29 August &amp; 5 September 2026</span></a></li>
+                    <li><a href="#">Microbiology for a Safer Food Industry — Quality, Safety and Sustainability<span class="prog-date">2, 3 &amp; 5 September 2026</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <a href="#courses">
+                  <span>Certified Short Courses</span>
+                  <span class="sub-arrow">&#8250;</span>
+                </a>
+                <div class="submenu-flyout">
+                  <div class="submenu-header">Certified Short Courses</div>
+                  <ul class="submenu-list">
+                    <li><a href="course-detail.html?course=applied-quality-control">Applied Quality Control in Zoological Sciences<span class="prog-date">10, 17 &amp; 19 September 2026</span></a></li>
+                    <li><a href="course-detail.html?course=lead-implementor">3 Days Lead Implementer Training Program<span class="prog-date">19, 26 September &amp; 3 October 2026</span></a></li>
+                    <li><a href="course-detail.html?course=sme-launchpad">SME LaunchPad Program<span class="prog-date">29, 30 September &amp; 1 October 2026</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <a href="#courses">
+                  <span>Diploma</span>
+                  <span class="sub-arrow">&#8250;</span>
+                </a>
+                <div class="submenu-flyout">
+                  <div class="submenu-header">Diploma Programs</div>
+                  <ul class="submenu-list">
+                    <li><a href="course-detail.html?course=animation-game-design-basic">Animation &amp; Game Design (Basic)<span class="prog-date">6 Months</span></a></li>
+                    <li><a href="course-detail.html?course=animation-game-design-advance">Animation &amp; Game Design (Advance)<span class="prog-date">1 Year</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <a href="#courses">
+                  <span>Workshops</span>
+                  <span class="sub-arrow">&#8250;</span>
+                </a>
+                <div class="submenu-flyout">
+                  <div class="submenu-header">Workshops</div>
+                  <ul class="submenu-list">
+                    <li><a href="course-detail.html?course=block-screen-print">Block &amp; Screen Print Workshop<span class="prog-date">24 August 2026</span></a></li>
+                    <li><a href="course-detail.html?course=canvas-painting">Canvas Painting Workshop<span class="prog-date">7 September 2026</span></a></li>
+                    <li><a href="course-detail.html?course=basic-crocheting">Basic Crocheting Workshop<span class="prog-date">8 September 2026</span></a></li>
+                    <li><a href="course-detail.html?course=organic-soap">Organic Soap Making Workshop<span class="prog-date">9 September 2026</span></a></li>
+                    <li><a href="course-detail.html?course=facial-serum">Facial Serum Making Workshop<span class="prog-date">30 September 2026</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <a href="internship-application.html">
+                  <span>Internships</span>
+                  <span class="sub-arrow">&#8250;</span>
+                </a>
+                <div class="submenu-flyout">
+                  <div class="submenu-header">Internships</div>
+                  <ul class="submenu-list">
+                    <li><a href="internship-application.html">Apply for Internship<span class="prog-date">Applications Open</span></a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </li>
           <li><a href="#apply">Admissions</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -2581,10 +2666,26 @@
         });
       });
 
+      // Submenu toggle for mobile
+      document.querySelectorAll('.has-submenu > a').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            var parentLi = link.parentElement;
+            var wasOpen = parentLi.classList.contains('open');
+            var siblingSubmenus = parentLi.parentElement.querySelectorAll('.has-submenu');
+            siblingSubmenus.forEach(function (li) {
+              li.classList.remove('open');
+            });
+            if (!wasOpen) parentLi.classList.add('open');
+          }
+        });
+      });
+
       navMenu.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
-          // Don't close the whole mobile menu when just opening a dropdown parent
-          if (link.parentElement.classList.contains('has-dropdown') && window.innerWidth <= 768) return;
+          // Don't close mobile menu when opening a parent dropdown or submenu
+          if ((link.parentElement.classList.contains('has-dropdown') || link.parentElement.classList.contains('has-submenu')) && window.innerWidth <= 768) return;
           if (navMenu.classList.contains('active')) toggleMenu();
         });
       });
@@ -2713,6 +2814,9 @@
 
     });
   </script>
+  <script>window.JUWBot = { config: { dataUrl: 'knowledge.json', adminPass: 'Mexico2108S' } };</script>
+  <script src="engine.js"></script>
+  <script src="widget.js"></script>
 </body>
 
 </html>
