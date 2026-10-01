@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Internship Program — JUW IPE</title>
-<meta name="description" content="Apply for a JUW IPE internship and gain real-world experience through partner organization placements.">
+<title>About JUW — Jinnah University for Women</title>
+<meta name="description" content="Learn about Jinnah University for Women — established in 1998 under Anjuman-e-Islamia Trust, empowering women through quality education, research, and community service.">
 <link rel="icon" href="images-juw/img-05.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -745,34 +745,104 @@
   }
   .program-banner-simple h1 { color: #fff; font-size: 32px; margin-bottom: 12px; }
   .program-banner-simple p { color: #d7e0e7; font-size: 15px; max-width: 600px; margin: 0 auto; }
+  .about-banner p { font-style: italic; }
 
-  /* ===== Internship Form Section ===== */
-  .internship-form-section { padding: 60px 0 80px; }
-  .form-placeholder-box {
-    max-width: 800px;
-    margin: 0 auto;
-    min-height: 380px;
-    border: 2px dashed var(--border-color);
+  /* ===== About IPE Page ===== */
+  .section-label {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--iba-maroon);
+    margin-bottom: 12px;
+  }
+  .section-label.light { color: var(--iba-gold); }
+
+  .about-intro-section { padding: 70px 0; }
+  .about-intro-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+  }
+  .about-intro-text h2 { font-size: 28px; margin-bottom: 20px; }
+  .about-intro-text p { color: var(--text-muted); font-size: 15px; line-height: 1.8; margin-bottom: 18px; }
+  .about-intro-logo {
+    background: var(--bg-light);
     border-radius: 8px;
-    background: #fff;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .placeholder-message {
+  .about-intro-logo img { width: 100%; max-width: 280px; height: auto; }
+
+  .why-ipe-section { background: var(--bg-light); padding: 70px 0; }
+  .why-ipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  .why-ipe-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px 25px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+  }
+  .why-ipe-card:hover { transform: translateY(-5px); }
+  .why-ipe-icon {
+    width: 54px;
+    height: 54px;
+    background: var(--iba-navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+  .why-ipe-icon svg { width: 26px; height: 26px; color: var(--iba-gold); }
+  .why-ipe-card h4 { font-size: 15.5px; margin-bottom: 10px; line-height: 1.35; }
+  .why-ipe-card p { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+
+  .vision-section { padding: 70px 0; }
+  .vision-box {
+    background: linear-gradient(135deg, var(--iba-navy), #013a61);
+    border-radius: 8px;
+    padding: 50px;
     text-align: center;
-    color: var(--text-muted);
-    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
   }
-  .placeholder-message svg {
-    width: 50px;
-    height: 50px;
+  .vision-box p {
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .explore-programs-section { padding: 0 0 70px; text-align: center; }
+  .explore-text { max-width: 700px; margin: 0 auto 25px; color: var(--text-muted); font-size: 15px; line-height: 1.7; }
+
+  .closing-quote-section {
+    background: var(--bg-light);
+    padding: 60px 0;
+    text-align: center;
+    border-top: 4px solid var(--iba-gold);
+  }
+  .closing-quote-section blockquote {
+    max-width: 750px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
     color: var(--iba-navy);
-    opacity: 0.5;
-    margin-bottom: 15px;
+    line-height: 1.5;
+    font-style: italic;
   }
-  .placeholder-message h3 { font-size: 18px; margin-bottom: 8px; color: var(--iba-navy); }
-  .placeholder-message p { font-size: 13.5px; }
 
   /* Responsive — Tablet */
   @media (max-width: 1024px) {
@@ -875,6 +945,14 @@
     .promo-card { grid-column: span 1; min-height: 200px; }
     .promo-overlay { max-width: 100%; padding: 25px; }
     .promo-icon { width: 100px; height: 100px; }
+
+    /* About IPE page — mobile */
+    .about-intro-grid { grid-template-columns: 1fr; gap: 30px; }
+    .about-intro-logo { order: -1; }
+    .why-ipe-grid { grid-template-columns: 1fr; }
+    .vision-box { padding: 30px 20px; }
+    .vision-box p { font-size: 17px; }
+    .closing-quote-section blockquote { font-size: 18px; }
     .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 25px 15px; }
     .numbers-bar h3 { font-size: 17px; }
     .features-grid { grid-template-columns: 1fr; }
@@ -929,7 +1007,6 @@
               <li><a href="about-JUW.html">About JUW</a></li>
               <li><a href="about-ipe.html">About IPE</a></li>
               <li><a href="#">Director's Message</a></li>
-              <li><a href="#">Our Team</a></li>
               <li><a href="index.html#partners">Partnerships</a></li>
             </ul>
           </li>
@@ -1017,35 +1094,151 @@
   <div class="mobile-overlay" id="mobileOverlay"></div>
 
   <!-- Page Banner -->
-  <section class="program-banner-simple">
+  <section class="program-banner-simple about-banner">
     <div class="container">
-      <h1>Internship Program</h1>
-      <p>Gain real-world experience through JUW IPE's internship placements with partner organizations.</p>
+      <h1>About JUW</h1>
+      <p>Jinnah University for Women — Empowering Women Through Quality Education Since 1998</p>
     </div>
   </section>
 
- <!-- Internship Application Form Section -->
-<section class="internship-form-section">
-  <div class="container">
-    <div class="section-title">
-      <h2>Apply for an Internship</h2>
+  <!-- Intro -->
+  <section class="about-intro-section">
+    <div class="container">
+      <div class="about-intro-grid">
+        <div class="about-intro-text">
+          <span class="section-label">Welcome to JUW</span>
+          <h2>Jinnah University for Women</h2>
+          <p>Jinnah University for Women was established in 1998 under the umbrella of Anjuman-e-Islamia Trust, founded by Al-Haj Moulvi Reyazuddin Ahmed (T.I). The University is one of the 17 institutions established by the Trust but is the most important, as the dream of the founder to establish a separate University for girls came true.</p>
+          <p>The University supports intellectual and personal growth of students, preparing them to become transformational citizens with sound ethical, cultural and religious values. Jinnah University for Women focuses on priorities in increasing the quality of service delivery, providing practical cum industrial oriented syllabus, promoting total quality management of educational programs, ensuring a valuable campus environment for the faculty and students, increasing value added programs, convergence of technologies, and taking the benefits of research and development to the communities in need.</p>
+          <p>To achieve these goals, the girls are empowered through quality education to take best advantage of their educational opportunities and they are endowed with critical thoughts, leading them to assume roles in leadership, sense of responsibility, and service to the society. Inherent in this broad mission are methods of instruction, research, extensive training, and public service that are skillfully designed to educate our students and impart keen ambition and aspiration to serve their own kind. Basic to every purpose of the University is the investigation of truth and remodeling of excellence.</p>
+        </div>
+        <div class="about-intro-logo">
+          <img src="images-juw/img-05.png" alt="Jinnah University for Women Logo" style="max-width: 280px;"></div>
+      </div>
     </div>
+  </section>
 
-    <div class="form-placeholder-box" id="internshipFormContainer" style="padding: 0; background: transparent; border: none;">
-      <!-- Google Form Embed Code -->
-      <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfwxupbs95yUZrS0ATRPbPFQBGBh7yaeVnoGlmnawxbLiZG8Q/viewform?embedded=true" 
-        width="100%" 
-        height="1000" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0"
-        style="border: none; border-radius: 8px;">
-        Loading…
-      </iframe>
+  <!-- Why Choose JUW -->
+  <section class="why-ipe-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose JUW</h2>
+      </div>
+      <div class="why-ipe-grid">
+        <div class="why-ipe-card">
+          <div class="why-ipe-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Quality Education & Service Delivery</h4>
+          <p>Committed to increasing the quality of service delivery and promoting total quality management of educational programs.</p>
+        </div>
+        <div class="why-ipe-card">
+          <div class="why-ipe-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Practical & Industrial Oriented Syllabus</h4>
+          <p>Providing practical cum industrial oriented syllabus to prepare students for real-world challenges.</p>
+        </div>
+        <div class="why-ipe-card">
+          <div class="why-ipe-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Research & Community Development</h4>
+          <p>Taking the benefits of research and development to the communities in need.</p>
+        </div>
+        <div class="why-ipe-card">
+          <div class="why-ipe-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Women Empowerment & Leadership</h4>
+          <p>Empowering girls through quality education to assume roles in leadership, responsibility, and service to society.</p>
+        </div>
+        <div class="why-ipe-card">
+          <div class="why-ipe-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15a4 4 0 100-8 4 4 0 000 8zM6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Ethical, Cultural & Religious Values</h4>
+          <p>Preparing transformational citizens with sound ethical, cultural and religious values.</p>
+        </div>
+        <div class="why-ipe-card">
+          <div class="why-ipe-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Convergence of Technologies</h4>
+          <p>Increasing value added programs and convergence of technologies for a valuable campus environment.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="vision-section">
+    <div class="container">
+      <div class="vision-box">
+        <span class="section-label light">Our Vision & Mission</span>
+        <p>The investigation of truth and remodeling of excellence is basic to every purpose of the University. JUW supports intellectual and personal growth of students, preparing them to become transformational citizens with sound ethical, cultural and religious values — empowered through quality education to assume roles in leadership, responsibility, and service to society.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUW Priorities -->
+  <section class="explore-programs-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>JUW Strategic Priorities</h2>
+      </div>
+      <p class="explore-text">Jinnah University for Women focuses on increasing the quality of service delivery, providing practical cum industrial oriented syllabus, promoting total quality management of educational programs, ensuring a valuable campus environment for faculty and students, increasing value added programs, convergence of technologies, and taking the benefits of research and development to communities in need.</p>
+      <div class="explore-cta">
+        <a href="index.html#courses" class="btn-apply">View IPE Programs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnerships -->
+  <section id="partnerships" class="why-ipe-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Partnerships</h2>
+      </div>
+      <div class="why-ipe-grid">
+        <div class="why-ipe-card">
+          <div class="why-ipe-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Academic Collaborations</h4>
+          <p>Partnerships with national and international universities for student exchange, joint research, and curriculum development.</p>
+        </div>
+        <div class="why-ipe-card">
+          <div class="why-ipe-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Industry Partnerships</h4>
+          <p>Collaborations with leading organizations for internships, training programs, and employment opportunities for graduates.</p>
+        </div>
+        <div class="why-ipe-card">
+          <div class="why-ipe-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Research Alliances</h4>
+          <p>Joint research initiatives with research institutes and organizations addressing community and national development needs.</p>
+        </div>
+        <div class="why-ipe-card">
+          <div class="why-ipe-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 15a4 4 0 100-8 4 4 0 000 8zM6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4>Community Engagement</h4>
+          <p>Partnerships with NGOs and community organizations for outreach programs, social impact projects, and service learning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing Quote -->
+  <section class="closing-quote-section">
+    <div class="container">
+      <blockquote>&ldquo;Basic to every purpose of the University is the investigation of truth and remodeling of excellence.&rdquo;</blockquote>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer id="contact">
@@ -1058,9 +1251,9 @@
         <div>
           <h4>Quick Links</h4>
           <ul>
+            <li><a href="about-JUW.html">About JUW</a></li>
             <li><a href="about-ipe.html">About IPE</a></li>
             <li><a href="index.html#courses">Short Courses</a></li>
-            <li><a href="index.html#courses">Executive Diplomas</a></li>
             <li><a href="index.html#apply">Admissions</a></li>
           </ul>
         </div>
