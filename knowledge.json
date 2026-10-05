@@ -685,6 +685,132 @@
         "roman": "Address: 5C, Nazimabad, Karachi, Pakistan | Phone: +92-21-36620857 | Email: info@juw.edu.pk"
       },
       "links": []
+    },
+    {
+      "question": {
+        "en": "What are the latest news? latest news, recent events, news and events, latest happenings, what's new, upcoming events, events",
+        "ur": "latest news kya hai",
+        "roman": "latest news kya hai, taza khabrein, recent events, naye events, kya hua, latest news events, news, events, khabrein, taza, upcoming events, recent news"
+      },
+      "answer": {
+        "en": "Latest News & Events at JUW IPE (latest first): 1) SME Launch Pad Program — 28 & 29 September 2026. 2) Organic Soap Making Workshop — 9 September 2026. 3) Basic Crocheting Workshop — 8 September 2026. 4) Canvas Painting Workshop — 7 September 2026. 5) Microbiology for a Safer Food Industry — 2, 3 & 5 September 2026. 6) Industrial Quality Assurance and Regulatory Laboratory Practices — 22 Aug, 29 Aug & 5 Sep 2026. 7) Block & Screen Printing Workshop — 24 August 2026. Full details on our News & Events page.",
+        "ur": "Latest News & Events: SME Launch Pad (28-29 Sep), Organic Soap (9 Sep), Basic Crocheting (8 Sep), Canvas Painting (7 Sep), Microbiology (2,3,5 Sep), Industrial QA (22 Aug, 29 Aug, 5 Sep), Block & Screen Print (24 Aug).",
+        "roman": "Latest News & Events (latest pehle): 1) SME Launch Pad — 28 & 29 Sep 2026. 2) Organic Soap — 9 Sep 2026. 3) Basic Crocheting — 8 Sep 2026. 4) Canvas Painting — 7 Sep 2026. 5) Microbiology — 2, 3 & 5 Sep 2026. 6) Industrial QA — 22 Aug, 29 Aug & 5 Sep 2026. 7) Block & Screen Print — 24 Aug 2026. Details ke liye News & Events page dekhein."
+      },
+      "kind": "news",
+      "links": ["news-events.html"]
+    },
+    {
+      "question": {
+        "en": "Where is the news and events page? news page, events page, where to find news and events, news and events kahan hai",
+        "ur": "news events page kahan hai",
+        "roman": "news events page kahan hai, khabrein ka page, events ka page, news page kahan, news & events, khabrein, events"
+      },
+      "answer": {
+        "en": "You can find the latest News & Events on our News & Events page. Click the NEWS & EVENTS link in the top menu.",
+        "ur": "News & Events page par jao. Top menu mein NEWS & EVENTS link hai.",
+        "roman": "Latest News & Events humare News & Events page par milenge. Top menu mein NEWS & EVENTS link par click karein."
+      },
+      "kind": "news",
+      "links": ["news-events.html"]
+    },
+    {
+      "question": {
+        "en": "Tell me about SME Launch Pad Program sme launch pad, launchpad, SME program, entrepreneurship program, business program",
+        "ur": "SME Launch Pad kya hai",
+        "roman": "SME Launch Pad kya hai, launchpad, SME program, SME launch pad program, karobar, entrepreneurship, business program, SME"
+      },
+      "answer": {
+        "en": "SME Launch Pad Program was organized on 28 & 29 September 2026 in collaboration with the State Bank of Pakistan. It empowered aspiring entrepreneurs with practical knowledge for building and growing sustainable businesses, covering entrepreneurship, business development, financial awareness, and SME sector opportunities.",
+        "ur": "SME Launch Pad Program 28 & 29 September 2026 ko State Bank of Pakistan ke saath hua. Isne aspiring entrepreneurs ko sustainable business banane aur barhane ka practical knowledge diya.",
+        "roman": "SME Launch Pad Program 28 & 29 September 2026 ko State Bank of Pakistan ke saath hua. Isne aspiring entrepreneurs ko entrepreneurship, business development, financial awareness aur SME sector ke opportunities ka practical knowledge diya."
+      },
+      "kind": "news",
+      "links": ["news-events.html"]
+    },
+    {
+      "question": {
+        "en": "Tell me about Organic Soap Making Workshop soap making, organic soap, soap workshop, natural soap, sabun workshop",
+        "ur": "Organic Soap Making Workshop ke bare mein bataein",
+        "roman": "Organic Soap Making Workshop kya hai, sabun making, organic soap workshop, natural soap, soap workshop, sabun banane ka workshop"
+      },
+      "answer": {
+        "en": "Organic Soap Making Workshop was held on 9 September 2026. Participants learned fundamentals of handmade soap production — ingredients, formulation, preparation techniques, and safe handling practices. It also highlighted natural product development and entrepreneurial opportunities.",
+        "ur": "Organic Soap Making Workshop 9 September 2026 ko hua. Participants ne handmade soap banane ka tareeqa seekha — ingredients, formulation, preparation, aur safe handling.",
+        "roman": "Organic Soap Making Workshop 9 September 2026 ko hua. Participants ne handmade soap production seekha — ingredients, formulation, preparation techniques, aur safe handling. Natural product development aur entrepreneurial opportunities bhi sikhayi gayi."
+      },
+      "kind": "news",
+      "links": ["news-events.html"]
+    },
+    {
+      "question": {
+        "en": "Tell me about Basic Crocheting Workshop crocheting, crochet, crochet workshop, knitting, wool workshop",
+        "ur": "Basic Crocheting Workshop ke bare mein bataein",
+        "roman": "Basic Crocheting Workshop kya hai, crochet, crocheting workshop, kroshiya, knitting, wool, crochet workshop"
+      },
+      "answer": {
+        "en": "Basic Crocheting Workshop was held on 8 September 2026. It introduced participants to fundamental crocheting techniques — basic stitches, crochet tools, and materials — and highlighted the potential of handicraft skills for personal development and entrepreneurial opportunities.",
+        "ur": "Basic Crocheting Workshop 8 September 2026 ko hua. Participants ko basic crochet stitches, tools aur materials sikhayi gayi.",
+        "roman": "Basic Crocheting Workshop 8 September 2026 ko hua. Isme participants ko basic crochet stitches, crochet tools aur materials sikhayi gayi, aur handicraft skills ka entrepreneurial potential bataya gaya."
+      },
+      "kind": "news",
+      "links": ["news-events.html"]
+    },
+    {
+      "question": {
+        "en": "Tell me about Canvas Painting Workshop painting, canvas painting, art workshop, painting workshop, nakashi",
+        "ur": "Canvas Painting Workshop ke bare mein bataein",
+        "roman": "Canvas Painting Workshop kya hai, painting, canvas painting, art workshop, nakashi, painting workshop"
+      },
+      "answer": {
+        "en": "Canvas Painting Workshop was organized on 7 September 2026. It gave participants the opportunity to explore creativity through painting, introducing basic canvas painting techniques, composition, and artistic expression in a supportive and interactive environment.",
+        "ur": "Canvas Painting Workshop 7 September 2026 ko hua. Participants ne painting ke zariye creativity explore ki, basic techniques, composition aur artistic expression sikhi.",
+        "roman": "Canvas Painting Workshop 7 September 2026 ko hua. Participants ne painting ke zariye creativity explore ki — basic canvas painting techniques, composition, aur artistic expression sikhayi gayi."
+      },
+      "kind": "news",
+      "links": ["news-events.html"]
+    },
+    {
+      "question": {
+        "en": "Tell me about Microbiology for a Safer Food Industry microbiology, food safety, HACCP, food quality, food industry",
+        "ur": "Microbiology for a Safer Food Industry ke bare mein bataein",
+        "roman": "Microbiology for a Safer Food Industry kya hai, microbiology, food safety, HACCP, food quality, food industry, microbiology program"
+      },
+      "answer": {
+        "en": "Microbiology for a Safer Food Industry: Quality, Safety & Sustainability was conducted on 2, 3 & 5 September 2026. The program strengthened participants' understanding of microbiology in the food sector, focusing on food quality, safety, hygiene, contamination control, and sustainable food production.",
+        "ur": "Microbiology for a Safer Food Industry 2, 3 & 5 September 2026 ko hua. Program ka maksad food quality, safety, hygiene aur contamination control par understanding mazboot karna tha.",
+        "roman": "Microbiology for a Safer Food Industry: Quality, Safety & Sustainability 2, 3 & 5 September 2026 ko hua. Isne food quality, safety, hygiene, contamination control, aur sustainable food production par understanding mazboot ki."
+      },
+      "kind": "news",
+      "links": ["news-events.html"]
+    },
+    {
+      "question": {
+        "en": "Tell me about Industrial Quality Assurance and Regulatory Laboratory Practices quality assurance, QC, HACCP, lab practices, industrial QA, regulatory laboratory",
+        "ur": "Industrial Quality Assurance ke bare mein bataein",
+        "roman": "Industrial Quality Assurance kya hai, quality assurance, QC, HACCP, lab practices, industrial quality, regulatory laboratory, QA training"
+      },
+      "answer": {
+        "en": "Industrial Quality Assurance and Regulatory Laboratory Practices was a three-day professional training program held on 22 August, 29 August & 5 September 2026. It covered quality assurance, quality control, laboratory practices, HACCP, risk management, traceability, and regulatory requirements.",
+        "ur": "Industrial Quality Assurance and Regulatory Laboratory Practices 3-day training program tha jo 22 Aug, 29 Aug & 5 Sep 2026 ko hua. Isme QA, QC, lab practices, HACCP, risk management, traceability aur regulatory requirements cover hui.",
+        "roman": "Industrial Quality Assurance and Regulatory Laboratory Practices 3-day professional training program tha, 22 Aug, 29 Aug & 5 Sep 2026 ko. Isme QA, QC, lab practices, HACCP, risk management, traceability, aur regulatory requirements cover hui."
+      },
+      "kind": "news",
+      "links": ["news-events.html"]
+    },
+    {
+      "question": {
+        "en": "Tell me about Block & Screen Printing Workshop block print, screen print, printing workshop, block printing, screen printing",
+        "ur": "Block & Screen Printing Workshop ke bare mein bataein",
+        "roman": "Block & Screen Printing Workshop kya hai, block print, screen print, printing workshop, balk print, skrin print, printing"
+      },
+      "answer": {
+        "en": "Block & Screen Printing Workshop was organized on 24 August 2026. It introduced participants to traditional and contemporary printing techniques — design development, fabric selection, and printing methods — providing a creative learning experience with potential for personal and entrepreneurial applications.",
+        "ur": "Block & Screen Printing Workshop 24 August 2026 ko hua. Participants ne traditional aur contemporary printing techniques seekhi — design development, fabric selection, aur printing methods.",
+        "roman": "Block & Screen Printing Workshop 24 August 2026 ko hua. Isme participants ne traditional aur contemporary printing techniques seekhi — design development, fabric selection, aur printing methods."
+      },
+      "kind": "news",
+      "links": ["news-events.html"]
     }
   ]
 }

@@ -892,6 +892,21 @@
       }
     }
 
+    if (faqBest && faqBest.kind === 'news' && faqBestScore >= 5 && /\b(news|events?|workshops?|seminars?|sme|launch ?pad|launchpad|microbiology|organic|soap|crochet(ing)?|canvas|painting|block|screen|print(ing)?|industrial|recent(ly)?|latest|khabrein|taza)\b/i.test(text)) {
+      return {
+        intent: 'faq',
+        score: faqBestScore,
+        course: course,
+        category: category,
+        faq: faqBest,
+        faqScore: faqBestScore,
+        tokens: tokens,
+        norm: norm,
+        scores: scores,
+        greetAck: greetAck
+      };
+    }
+
     if (faqBestScore >= 5 && faqBestScore > bestScore) {
       var mapped = mapFaqToIntent(faqBest);
       if (internRe.test(norm)) mapped = 'internship';

@@ -881,7 +881,8 @@
       { label: 'Admission', value: 'how to apply for admission' },
       { label: 'Internship', value: 'internship apply' },
       { label: 'Fees', value: 'fee structure' },
-      { label: 'Contact', value: 'contact' }
+      { label: 'Contact', value: 'contact' },
+      { label: 'News & Events', value: 'latest news' }
     ]);
   }
 
