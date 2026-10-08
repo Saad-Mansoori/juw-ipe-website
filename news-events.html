@@ -329,6 +329,19 @@
     display: block;
   }
 
+  .load-more-wrap { text-align: center; margin-top: 30px; }
+  .load-more-btn {
+    padding: 12px 32px;
+    background: #00205b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  .load-more-btn:hover { opacity: 0.88; }
+
   /* ===== Footer ===== */
   footer {
     background: #001A2C;
@@ -655,6 +668,10 @@
         </div>
 
       </div>
+
+      <div class="load-more-wrap">
+        <button type="button" class="load-more-btn" id="newsLoadMore">Load More News</button>
+      </div>
     </div>
   </section>
 
@@ -691,6 +708,10 @@
         <img src="images-juw/IMG-20260928-WA0121.jpg" alt="Event photo 24" loading="lazy">
         <img src="images-juw/IMG-20260929-WA0046.jpg" alt="Event photo 25" loading="lazy">
         <img src="images-juw/IMG-20260929-WA0061.jpg" alt="Event photo 26" loading="lazy">
+      </div>
+
+      <div class="load-more-wrap">
+        <button type="button" class="load-more-btn" id="galleryLoadMore">Load More Photos</button>
       </div>
     </div>
   </section>
@@ -733,6 +754,28 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Load More: News cards
+  var newsCards = document.querySelectorAll('.news-card');
+  var newsBtn = document.getElementById('newsLoadMore');
+  var newsShown = 3;
+  function renderNews() {
+    newsCards.forEach(function (card, i) { card.style.display = i < newsShown ? '' : 'none'; });
+    if (newsBtn) newsBtn.style.display = newsShown >= newsCards.length ? 'none' : '';
+  }
+  if (newsBtn) newsBtn.addEventListener('click', function () { newsShown += 3; renderNews(); });
+  renderNews();
+
+  // Load More: Gallery photos
+  var galleryImgs = document.querySelectorAll('.gallery-grid img');
+  var galleryBtn = document.getElementById('galleryLoadMore');
+  var galleryShown = 12;
+  function renderGallery() {
+    galleryImgs.forEach(function (img, i) { img.style.display = i < galleryShown ? '' : 'none'; });
+    if (galleryBtn) galleryBtn.style.display = galleryShown >= galleryImgs.length ? 'none' : '';
+  }
+  if (galleryBtn) galleryBtn.addEventListener('click', function () { galleryShown += 12; renderGallery(); });
+  renderGallery();
+
   var hamburger = document.getElementById('hamburger');
   var navMenu = document.getElementById('navMenu');
   var overlay = document.getElementById('mobileOverlay');
